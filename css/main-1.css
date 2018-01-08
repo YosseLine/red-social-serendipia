@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Estilos para body*/
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: rgb(62,176,96);
+}
+.grad {
+    background: linear-gradient(rgb(62,176,96)60%, rgb(14,80,34));
+    width: 100%;
+}
+/*Estilos para la lista no ordenada de frases*/
+#tips, #tips li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+#tips{
+  display: initial;
+	width:250px;
+	font-size:2.5em;
+	line-height:120%;
+	}
+#tips li{
+	padding:20px;
+	display:none; /* Parra mostrar solo un elemento de la lista */
+  text-shadow: #99FFCC 0px 0px 10px;
+  text-shadow: #99FFCC 0px 0px 10px 10px;
+	}
+  /*Clases reutilizables*/
+.container-flex-column{
+  height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+}
+.vh100 {
+	height: 100vh;
+}
