@@ -1,0 +1,23 @@
+/*SETEAR NUESTROS ARCHIVOS: SEA IGUAL PARA TODOS LOS NAVEGADORES*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ESTILOS AL BODY*/
+.height {
+	height: 100vh;
+}
+.flex-container {
+  display: flex;
+	flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.color-fond {
+  background: linear-gradient(rgb(62,176,96)60%, rgb(14,80,34));
+}
+/*ESTILOS A MAIN*/
+img {
+  display:none;
+}
