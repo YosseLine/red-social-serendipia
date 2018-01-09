@@ -27,6 +27,16 @@ function begin() {
   });
 }
 
+// Login with google
+var provider = new firebase.auth.GoogleAuthProvider();
+$('#login-google').click(function() {
+  firebase.auth()
+    .signInWithPopup(provider)
+    .then(function(result) {
+      console.log(result.user);
+    });
+});
+
 $(document).ready(function() {
   $('.button-collapse').dropdown();
   $('.modal').modal();

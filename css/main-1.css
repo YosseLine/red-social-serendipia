@@ -106,7 +106,9 @@ a.btn-style-principal{
 div#modal-sesion.modal{
   background-color: rgb(195,203,222);
 }
-
+a#login-google{
+  margin-top: 30px;
+}
 /*Estilos para vista Home*/
 section{
   padding-top: 80px;
