@@ -29,5 +29,6 @@ function begin() {
 
 $(document).ready(function() {
   $('.button-collapse').dropdown();
+  $('.modal').modal();
   begin();
 });

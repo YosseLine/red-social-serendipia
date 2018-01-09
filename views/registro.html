@@ -20,7 +20,7 @@
     <header>
       <!-- Dropdown Structure -->
       <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">Iniciar Sesión</a></li>
+        <li><a href="#modal-sesion" class="modal-trigger">Iniciar Sesión</a></li>
         <li><a href="#!">Sobre Nosotros</a></li>
       </ul>
       <nav>
@@ -95,10 +95,36 @@
                     </div>
                     <div class="row">
                       <div class="col s12">
-                        <p class="center-align">¿Tienes una cuenta? <a href="#">Iniciar Sesión</a></p>
+                        <p class="center-align">¿Tienes una cuenta? <a href="#modal-sesion" class="modal-trigger">Iniciar Sesión</a></p>
                       </div>
                     </div>
                   </form>
+                  <!--Modal de iniciar sesión-->
+                  <div id="modal-sesion" class="modal">
+                    <div class="modal-content">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right">Cerrar</a>
+                        <img class="col s4 offset-s4" src="../assets/images/user.png" alt="User">
+                      <div class="row">
+                        <form class="col s12 col m8 offset-m2">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="person" type="text" class="validate">
+                              <label for="person">Nombre de usuario</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input id="lock" type="password" class="validate">
+                              <label for="lock">Contraseña</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <a class="waves-effect btn disabled col s6 offset-s3 btn-style-principal">Iniciar Sesión</a>
+                            <br>
+                            <p class="col s12 margin-top">¿Olvidaste tu contraseña? <a href="#">Click aquí</a></p>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

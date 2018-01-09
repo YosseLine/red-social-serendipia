@@ -100,3 +100,7 @@ a.btn-style-principal{
   background-color: rgb(62,176,96);
   border-radius: 10px;
 }
+/*Estilos para modal Iniciar sesión*/
+div#modal-sesion.modal{
+  background-color: rgb(195,203,222);
+}
