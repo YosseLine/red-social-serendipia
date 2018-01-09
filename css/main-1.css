@@ -7,7 +7,9 @@
 body{
   font-family: 'Josefin Sans', sans-serif;
 }
-
+body.grad{
+  background: linear-gradient( rgb(62,176,96)60%, rgb(14,80,34));
+}
 /*Estilos para la lista no ordenada de frases*/
 #tips, #tips li{
 	margin:0;
@@ -22,7 +24,7 @@ body{
 	}
 #tips li{
 	padding:20px;
-	display:none; /* Parra mostrar solo un elemento de la lista */
+	display:none; /* Para mostrar solo un elemento de la lista */
   text-shadow: #99FFCC 0px 0px 10px;
   text-shadow: #99FFCC 0px 0px 10px 10px;
 	}
@@ -103,4 +105,26 @@ a.btn-style-principal{
 /*Estilos para modal Iniciar sesión*/
 div#modal-sesion.modal{
   background-color: rgb(195,203,222);
+}
+
+/*Estilos para vista Home*/
+section{
+  padding-top: 80px;
+}
+img.responsive-img.imagen-circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 2vh;
+    display: inline-block;
+}
+#home form div.btn.col.s3{
+  font-size: 10px;
+}
+#home textarea.materialize-textarea:focus{
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+#home textarea.materialize-textarea:focus + label{
+  color: #000;
 }
