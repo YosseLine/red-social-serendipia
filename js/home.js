@@ -34,6 +34,7 @@ $(document).ready(function() {
       });
   });
 
+  // Función que creará nuevos divs con el contenido del textarea
   $btnPublicarHome.on('click', function(event) {
     console.log($btnPublicarHome);
     event.preventDefault();
@@ -106,6 +107,8 @@ $(document).ready(function() {
     };
     $textArea2.val('');
   });
+
+  // Función que subirá fotos a la página
   $filePhotoMobile.change(function() {
     var $card = $('<div class= "card"></div>');
     var $cardContent = $('<div class= "card-content"></div>');
