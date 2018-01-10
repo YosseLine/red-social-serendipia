@@ -23,7 +23,7 @@ function begin() {
   });
 
   $('#btn-create-account').on('click', function() {
-    $(location).attr('href', 'splash-frases.html');
+    alert('¡Bienvenid@ a Serendipia!');
   });
 }
 
@@ -31,7 +31,12 @@ $(document).ready(function() {
   $('.button-collapse').dropdown();
   $('.modal').modal();
   begin();
+  var $loginAccount = $('#login-account');
 
+  // Función para redireccionar a splash al hacer click en botón iniciar Sesión
+  $loginAccount.on('click', function() {
+    window.location.href = '../views/splash-frases.html';
+  });
   // Login with google
   var provider = new firebase.auth.GoogleAuthProvider();
   $('#login-google').click(function() {
@@ -40,7 +45,7 @@ $(document).ready(function() {
       .then(function(result) {
         console.log(result.user);
         $('#login-google').hide();
-        window.location.href = '../views/splash-frases.html';
+        alert('¡Bienvenid@ a Serendipia!');
       });
   });
 
