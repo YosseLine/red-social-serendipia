@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Estilos para body*/
+body{
+  font-family: 'Josefin Sans', sans-serif;
+}
+body.grad{
+  background: linear-gradient( rgb(62,176,96)60%, rgb(14,80,34));
+}
+/*Estilos para la lista no ordenada de frases*/
+#tips, #tips li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+#tips{
+  display: initial;
+	width:250px;
+	font-size:2.5em;
+	line-height:120%;
+	}
+#tips li{
+	padding:20px;
+	display:none; /* Para mostrar solo un elemento de la lista */
+  text-shadow: #99FFCC 0px 0px 10px;
+  text-shadow: #99FFCC 0px 0px 10px 10px;
+	}
+  /*Clases reutilizables*/
+.container-flex-column{
+  height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+}
+.vh100 {
+	height: 100vh;
+}
+.logo-header{
+  width: 120px;
+}
+
+/*Clases para vista resgistro*/
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 998;
+}
+/*Clases para el nav*/
+nav{
+  background-color: rgb(62,176,96);
+  height: 80px;
+  padding: 10px;
+}
+main#registro.container-flex-column{
+  background-image: url('https://i.pinimg.com/originals/f7/80/06/f7800630afae01ea3235e26a613a62ed.jpg');
+  /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+  background-position: center center;
+  /* Para que la imagen de fondo no se repita */
+  background-repeat: no-repeat;
+  /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+  background-attachment: fixed;
+  /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+  background-size: cover;
+}
+#registro .row{
+  margin-bottom: 0;
+}
+.container-registro{
+  margin-top: 80px;
+}
+.margin-left{
+  margin-left: 20px;
+}
+.margin-top{
+  margin-top: 20px;
+}
+.margin-bottom{
+  margin-bottom: 10px;
+}
+form.col.s12 div.input-field.col.s12 input{
+  border-bottom: 1px solid #000;
+}
+.input-field label {
+  color: #000;
+}
+/* label focus color */
+.input-field.col.s12 input[type=text]:focus + label, .input-field.col.s12 input[type=email]:focus + label, .input-field.col.s12 input[type=password]:focus + label {
+     color: #000;
+   }
+/* valid color */
+  .input-field.col.s12 input[type=text]:focus, .input-field.col.s12 input[type=email]:focus, .input-field.col.s12 input[type=password]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  [type="radio"]:not(:checked)+label, [type="radio"]:checked+label, [type="checkbox"]+label{
+    color: #000;
+  }
+a.btn-style-principal{
+  background-color: rgb(62,176,96);
+  border-radius: 10px;
+}
+/*Estilos para modal Iniciar sesión*/
+div#modal-sesion.modal{
+  background-color: rgb(195,203,222);
+}
+a#login-google{
+  margin-top: 30px;
+}
+/*Estilos para vista Home*/
+.background-grey{
+  background-color: rgb(236,235,235);
+}
+.margin-btm-0{
+  margin-bottom: 0;
+}
+.margin-top-0{
+  margin-top: 0;
+}
+section{
+  padding-top: 80px;
+}
+img.responsive-img.imagen-circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 2vh;
+    display: inline-block;
+}
+.image-style{
+  width: 120px;
+  height: 100px;
+}
+.height-image{
+  height: -webkit-fill-available;
+}
+.style-card{
+  border: 1px solid green;
+  border-radius: 15px;
+  background-color: rgba(62,176,96,0.1);
+}
+i.large.heart{
+  font-size: 20px;
+  color: red;
+}
+.display-none{
+  display: none;
+}
+.width-btn{
+  width: 46%;
+}
+#home form div.btn.col.s3{
+  font-size: 10px;
+}
+#home textarea.materialize-textarea:focus{
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+#home textarea.materialize-textarea:focus + label{
+  color: #000;
+}
+@media only screen and (min-width: 601px) {
+.container {
+    width: 90%;
+}
+@media (min-width: 768px) {
+  #registro form{
+  font-size: 1.2rem;
+  }
+  #registro form.col.s12 div.input-field.col.s12 label{
+  font-size: 1.2rem;
+  }
+  #registro form [type="checkbox"]+label, #registro form [type="radio"]:not(:checked)+label, #registro form [type="radio"]:checked+label{
+    font-size: 1.2rem;
+  }
+  img.responsive-img.imagen-circle{
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 992px) {
+  header nav ul a{
+    font-size: 1.2rem;
+  }
+  .container-registro .container{
+    width: 90%;
+  }
+  #registro form{
+  font-size: 1.2rem;
+  }
+  #registro form.col.s12 div.input-field.col.s12 label{
+  font-size: 1.2rem;
+  }
+  #registro form [type="checkbox"]+label, #registro form [type="radio"]:not(:checked)+label, #registro form [type="radio"]:checked+label{
+    font-size: 1.2rem;
+  }
+  #home div.card.horizonta.style-card{
+    margin-top: 2vh;
+  }
+  img.responsive-img.imagen-circle{
+    margin-left: 5vw;
+  }
+  #home div.card-content-user{
+    padding: 15px;
+  }
+  header nav.nav-desktop{
+    height: 79px;
+  }
+  #home div.card.style-card{
+    margin-top: 2vh;
+    border-radius: 15px;
+  }
+  #home .height-card-post{
+    height: 17.7vh;
+  }
+}
+@media (min-width: 1200px) {
+  #registro form{
+    font-size: 1rem;
+  }
+  #registro form.col.s12 div.input-field.col.s12 label{
+  font-size: 1rem;
+  }
+  #registro form [type="checkbox"]+label, #registro form [type="radio"]:not(:checked)+label, #registro form [type="radio"]:checked+label{
+    font-size: 1rem;
+  }
+  #registro .container-registro .container {
+    width: 100%;
+}
+ #home .height-card-post {
+    height: 35vh;
+ }
+ img.responsive-img.imagen-circle{
+   margin-left: 8vw;
+ }
+}
