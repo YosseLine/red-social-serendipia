@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Serendipia</title>
+  <!--Añadiendo color a la barra de navegador que se verá desde versión mobile-->
+  <meta name="theme-color" content="#3eb060"/>
+  <link rel="icon" type="image/png" href="../assets/images/infinity.png">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/main-2.css">
+</head>
+<body class="height grey lighten-5">
+  <!--ENCABEZADO-->
+  <header>
+    <nav class="background-color navbar-fixed">
+      <div class="container-nav">
+       <div class="row nav-wrapper">
+         <div class="col s3 l4 xl4 div-image">
+           <a href=""><img src="../assets/images/logo.png" alt="logo" class="responsive-img"></a>
+         </div>
+         <div class="input-field col s5 l4 xl4">
+          <i class="material-icons prefix">search</i>
+          <input class="input" id="search" type="text" class="validate" placeholder="   Buscar">
+         </div>
+         <!--usuario solo visible en mobile-->
+         <a href="#!" class="col s1 hide-on-med-and-up"><i class="material-icons">account_circle</i></a>
+         <!--Menú hamburguesa solo visible en mobile-->
+         <a href="#" data-activates="dropdown2" class=" col s2 dropdown-button button-collapse pulse"><i class="material-icons">menu</i></a>
+         <ul class="right hide-on-med-and-down">
+          <li><a href="#!"><i class="material-icons">account_circle</i></a></li>
+          <li><a href="#!"><i class="material-icons">notifications</i></a></li>
+          <li><a href="#!">Inicio</a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">more_vert</i></a></li>
+         </ul>
+         <!--Lista desplegable para salir(cerrar sesión)-->
+         <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!">Salir</a></li>
+        </ul>
+         <!--Lista desplegable del MENÚ HAMBURGUESA-->
+         <ul class="dropdown-content" id="dropdown2">
+          <li><a href="#">Alertas</a></li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#!">Salir</a></li>
+        </ul>
+       </div>
+      </div>
+    </nav>
+  </header>
+  <!-- FIRST SECTION-->
+  <section class="section-first">
+    <div class="container">
+      <div class="row"  >
+        <div class="col s12 container-perfil-portada">
+          <a href="#" id="file-select" class="btn grey lighten-2">Sube</a>
+          <img id="preview-img"src="../assets/images/portada-vacia.png" alt="" class=" height-portada  col s12 l12 responsive-image">
+        </div>
+        <form enctype="multipart/form-data">
+          <input id="file-portada" name="file" type="file"/>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col s4 container-perfil-portada">
+          <a href="#" id="file-select-perfil" class="btn grey lighten-2">Sube</a>
+          <img id="perfil-img" src="../assets/images/perfil.png" alt="" class="responsive-image circle">
+        </div>
+        <form enctype="multipart/form-data">
+          <input id="file-perfil" name="file" type="file"/>
+        </form>
+        <div id="div-container-buttons" class="col s8 center-align">
+          <a id="fotos"class="waves-effect col s6 waves-light btn btn-fotos green accent-4 ">Fotos</a>
+          <a class="waves-effect col s6 waves-light btn green accent-4 modal-trigger" href="#modal1">Amigos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECOND SECTION-->
+  <section class="second-section">
+    <div class="container posts green lighten-5">
+     <div class="row">
+       <form class="col s12">
+         <div class="row">
+           <div class="input-field col s12 center-align">
+             <textarea id="textarea1" class="materialize-textarea"></textarea>
+             <label for="textarea1"><i class="material-icons left">account_circle</i>¿Cuéntanos lo que desees?</label>
+             <a href="#" id="file-select-post-foto" class="btn blue"><i class="material-icons right">arrow_upward</i>Foto</a>
+             <form enctype="multipart/form-data">
+               <input id="file-post-foto" name="file" type="file"/>
+             </form>
+             <a id="btn-publicar-perfil"class="waves-effect waves-light btn btn blue disabled"><i class="material-icons right">arrow_upward</i>Publicar</a>
+           </div>
+         </div>
+       </form>
+     </div>
+    </div>
+    <div class="container fotos">
+      <div class="row">
+       <div id="container-post" class="col s12">
+        <!-- aqui van los post-->
+       </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECOND SECTION-->
+  <section class="third-section hide">
+    <div class="container green lighten-5 gallery">
+      <div class="row">
+        <div class="col s12 center-align">
+          <a href="#" id="file-select-foto" class="btn blue btn-subir-foto"><i class="material-icons right">arrow_upward</i>Subir fotos</a>
+          <form enctype="multipart/form-data">
+            <input id="file-foto" name="file" type="file"/>
+          </form>
+          <div class="col s12" id="fotos-container">
+            <!-- aqui van las fotos-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- MODAL ESTRUCTURE -->
+  <div id="modal1" class="modal">
+    <div class="modal-content grey lighten-2">
+      <h5 class="center-align  green white-text">Amigos</h5>
+      <div class="collection">
+        <a class="collection-item avatar">
+          <img src="../assets/images/perfil.png" alt="" class="circle">
+          <span class="title">Renato Tapia</span>
+        </a>
+        <a class="collection-item avatar">
+          <img src="../assets/images/perfil.png" alt="" class=" responsive-img circle">
+          <span class="title">Sofia Gabriela</span>
+        </a>
+        <a class="collection-item avatar">
+          <img src="../assets/images/perfil.png" alt="" class="circle">
+          <span class="title">María Alejandra</span>
+        </a>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn blue white-text btn-flat">Cerrar</a>
+    </div>
+  </div>
+  <!-- Vínculo de archivos js-->
+  <script type="text/javascript" src="../vendors/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/vistaPerfil.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBVwTq6BZdhL7C5A2N1INmIdo5bhnr5vno",
+    authDomain: "serendipia-af4b4.firebaseapp.com",
+    databaseURL: "https://serendipia-af4b4.firebaseio.com",
+    projectId: "serendipia-af4b4",
+    storageBucket: "serendipia-af4b4.appspot.com",
+    messagingSenderId: "1097799929522"
+  };
+  firebase.initializeApp(config);
+  </script>
+</body>
+</html>
