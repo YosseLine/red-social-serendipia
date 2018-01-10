@@ -1,11 +1,15 @@
 $(document).ready(function() {
+  $('.button-collapse').dropdown();
   $('textarea#textarea1').characterCounter();
-  var $textArea = $('#textarea1');
+  var $textArea1 = $('#textarea1');
+  var $textArea2 = $('#textarea2');
   var $btnPublicarHome = $('#btn-publicar-home');
+  var $btnPublicarHomeDesktop = $('#btn-publicar-home-desktop');
   var $fotoSubida = $('#foto-subida');
-  var $btnPublicarFoto = $('#btn-publicar-foto');
   var $imagenUser = $('#imagen-user');
   var $cardBox = $('#card-box');
+  var $filePhotoMovile = $('#file-photo-movile');
+  var $filePhotoDesktop = $('#file-photo-desktop');
 
   $('#textarea1').on('keyup', function() {
     if ($('#textarea1').val().length !== 0) {
@@ -14,7 +18,13 @@ $(document).ready(function() {
       $('#btn-publicar-home').addClass('disabled', 'disabled');
     }
   });
-
+  $('#textarea2').on('keyup', function() {
+    if ($('#textarea2').val().length !== 0) {
+      $('#btn-publicar-home-desktop').removeClass('disabled');
+    } else {
+      $('#btn-publicar-home-desktop').addClass('disabled', 'disabled');
+    }
+  });
   $(window).on('load', function() {
     firebase.auth()
       .getRedirectResult()
@@ -27,12 +37,12 @@ $(document).ready(function() {
   $btnPublicarHome.on('click', function(event) {
     console.log($btnPublicarHome);
     event.preventDefault();
-    if ($textArea.val().length !== 0) {
-      console.log($textArea.val());
+    if ($textArea1.val().length !== 0) {
+      console.log($textArea1.val());
       var $card = $('<div class= "card"></div>');
       var $cardContent = $('<div class= "card-content"></div>');
       var $paragraph = $('<p/>', {
-        'html': $textArea.val()
+        'html': $textArea1.val()
       });
       var date = new Date();
       var hours = date.getHours() + ':' + date.getMinutes();
@@ -58,12 +68,74 @@ $(document).ready(function() {
       $card.addClass('style-card');
       $cardBox.append($card);
     };
-    $textArea.val('');
+    $textArea1.val('');
   });
+  $btnPublicarHomeDesktop.on('click', function(event) {
+    console.log($btnPublicarHome);
+    event.preventDefault();
+    if ($textArea2.val().length !== 0) {
+      console.log($textArea2.val());
+      var $card = $('<div class= "card"></div>');
+      var $cardContent = $('<div class= "card-content"></div>');
+      var $paragraph = $('<p/>', {
+        'html': $textArea2.val()
+      });
+      var date = new Date();
+      var hours = date.getHours() + ':' + date.getMinutes();
 
-  $btnPublicarFoto.on('click', function() {
-    if ($fotoSubida.attr('valid')) {
-      $createContent.append('<div><img src="uploads/$file_name"></div>');
-    }
+      var $dateBoxContainer = $('<div/>', {
+        'class': 'right-align'
+      });
+      var $dateContent = $('<p/>', {
+        'text': hours,
+      });
+
+      var $heart = $('<i class="material-icons heart">favorite</i>');
+      var $heartContent = $('<span/>', {
+        'text': $heart,
+      });
+      var $heartBoxContainer = $('<div/>', {
+        'class': 'left-align',
+      });
+      $dateBoxContainer.append($dateContent);
+      $heartBoxContainer.append($heartContent);
+      $cardContent.append($paragraph, $dateBoxContainer, $heartBoxContainer);
+      $card.append($cardContent);
+      $card.addClass('style-card');
+      $cardBox.append($card);
+    };
+    $textArea2.val('');
+  });
+  $filePhotoMobile.change(function() {
+    var $card = $('<div class= "card"></div>');
+    var $cardContent = $('<div class= "card-content"></div>');
+    var fileName = event.target.files[0];
+    var reader = new FileReader();
+    var $photoContainer = $('<div/>');
+    reader.onload = function(event) {
+      $photoContainer.append('<img class = "col s6 responsive-img image-style" src= "' + event.target.result + '"/>');
+      $cardContent.append($photoContainer);
+      $card.append($cardContent);
+      $card.addClass('style-card');
+      $card.addClass('height-image');
+      $('#card-box').append($card);
+    };
+    reader.readAsDataURL(fileName);
+  });
+  $filePhotoDesktop.change(function() {
+    var $card = $('<div class= "card"></div>');
+    var $cardContent = $('<div class= "card-content"></div>');
+    var fileName = event.target.files[0];
+    var reader = new FileReader();
+    var $photoContainer = $('<div/>');
+    reader.onload = function(event) {
+      $photoContainer.append('<img class = "col s6 responsive-img image-style" src= "' + event.target.result + '"/>');
+      $cardContent.append($photoContainer);
+      $card.append($cardContent);
+      $card.addClass('style-card');
+      $card.addClass('height-image');
+      $('#card-box').append($card);
+    };
+    reader.readAsDataURL(fileName);
   });
 });

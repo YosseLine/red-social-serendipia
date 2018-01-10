@@ -130,6 +130,13 @@ img.responsive-img.imagen-circle {
     margin-top: 2vh;
     display: inline-block;
 }
+.image-style{
+  width: 120px;
+  height: 100px;
+}
+.height-image{
+  height: -webkit-fill-available;
+}
 .style-card{
   border: 1px solid green;
   border-radius: 15px;
@@ -190,8 +197,24 @@ i.large.heart{
   #registro form [type="checkbox"]+label, #registro form [type="radio"]:not(:checked)+label, #registro form [type="radio"]:checked+label{
     font-size: 1.2rem;
   }
-  #home div.card.horizontal.style-card{
+  #home div.card.horizonta.style-card{
     margin-top: 2vh;
+  }
+  img.responsive-img.imagen-circle{
+    margin-left: 5vw;
+  }
+  #home div.card-content-user{
+    padding: 15px;
+  }
+  header nav.nav-desktop{
+    height: 79px;
+  }
+  #home div.card.style-card{
+    margin-top: 2vh;
+    border-radius: 15px;
+  }
+  #home .height-card-post{
+    height: 17.7vh;
   }
 }
 @media (min-width: 1200px) {
@@ -207,4 +230,10 @@ i.large.heart{
   #registro .container-registro .container {
     width: 100%;
 }
+ #home .height-card-post {
+    height: 35vh;
+ }
+ img.responsive-img.imagen-circle{
+   margin-left: 8vw;
+ }
 }
