@@ -58,16 +58,16 @@
       <span><i class="material-icons">arrow_upward</i></span>
       <input type="file">
     </a>
-        <img src="" alt="" class="responsive-img">
+        <img id="preview-img"src="" alt="" class="responsive-img">
       </div>
     </div>
       <div class="row">
         <div class="col s4">
           <img src="../assets/images/perfil.png" alt="" class="responsive-img circle">
         </div>
-        <div class="col s8 right-align">
-          <a class="waves-effect col s6 waves-light btn btn-fotos green accent-4 ">Fotos</a>
-          <a class="waves-effect col s6 waves-light btn green accent-4">Amigos</a>
+        <div id="div-container-buttons" class="col s8 center-align">
+          <a id="fotos"class="waves-effect col s6 waves-light btn btn-fotos green accent-4 ">Fotos</a>
+          <a class="waves-effect col s6 waves-light btn green accent-4 modal-trigger" href="#modal1">Amigos</a>
         </div>
       </div>
     </div>
@@ -97,10 +97,10 @@
        </div>
      </div>
   </section>
-  <secction class="third-section hide">
+  <section class="third-section hide">
     <div class="container grey lighten-2">
       <div class="row">
-        <div class="col s12 center-align">
+        <div id="foto-container"class="col s12 center-align">
           <div class="btn blue file-field input-field">
         <span><i class="material-icons right">arrow_upward</i>Subir foto</span>
         <input type="file">
@@ -108,10 +108,46 @@
         </div>
       </div>
     </div>
-  </secction>
+  </section>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content grey lighten-2">
+      <h5 class="center-align  green white-text">Amigos</h5>
+      <div class="collection">
+    <a class="collection-item avatar">
+      <img src="../assets/images/perfil.png" alt="" class="circle">
+      <span class="title">Renato Tapia</span>
+    </a>
+    <a class="collection-item avatar">
+      <img src="../assets/images/perfil.png" alt="" class=" responsive-img circle">
+      <span class="title">Sofia Gabriela</span>
+    </a>
+    <a class="collection-item avatar">
+      <img src="../assets/images/perfil.png" alt="" class="circle">
+      <span class="title">María Alejandra</span>
+    </a>
+  </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn blue white-text btn-flat">Cerrar</a>
+    </div>
+  </div>
   <!-- Vínculo de archivos js-->
   <script type="text/javascript" src="../vendors/jQuery/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script type="text/javascript" src="../js/vistaPerfil.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBVwTq6BZdhL7C5A2N1INmIdo5bhnr5vno",
+    authDomain: "serendipia-af4b4.firebaseapp.com",
+    databaseURL: "https://serendipia-af4b4.firebaseio.com",
+    projectId: "serendipia-af4b4",
+    storageBucket: "serendipia-af4b4.appspot.com",
+    messagingSenderId: "1097799929522"
+  };
+  firebase.initializeApp(config);
+  </script>
 </body>
 </html>
