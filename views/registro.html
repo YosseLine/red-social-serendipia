@@ -21,14 +21,18 @@
       <!-- Dropdown Structure -->
       <ul id="dropdown1" class="dropdown-content">
         <li><a href="#modal-sesion" class="modal-trigger">Iniciar Sesión</a></li>
-        <li><a href="#!">Sobre Nosotros</a></li>
+        <li><a href="#!">Sobre nosotros</a></li>
       </ul>
       <nav>
         <div class="nav-wrapper">
           <img class="responsive-img logo-header" src="../assets/images/logo.png" alt="Serendipia">
-          <ul class="right">
+          <ul class="right hide-on-med-and-up">
             <li><a href="#!" data-activates="dropdown1" class="button-collapse"><i class="material-icons">menu</i></a></li>
           </ul>
+          <ul class="right show-on-medium-and-up hide-on-small-only">
+              <li><a href="#modal-sesion" class="modal-trigger">Iniciar sesión</a></li>
+              <li><a href="#">Sobre nosotros</a></li>
+            </ul>
         </div>
       </nav>
     </header>
@@ -38,13 +42,17 @@
           <div class="col s12">
             <div class="container-registro">
               <div class="container">
-                <div class="row">
+                <div class="row hide-on-med-and-up show-on-medium">
                   <div class="col s12">
                     <h4 class="center-align">Sé parte de Serendipia</h4>
                   </div>
                 </div>
                 <div class="row">
-                  <form class="col s12">
+                  <div class="col xl4 show-on-large hide-on-small-only hide-on-med-and-down">
+                    <h3 class="center-align">Sé parte de <br> <img src="../assets/images/logo.png" alt="" class="responsive-img"></h3>
+                    <h5 class="center-align">Crea tu cuenta y aventúrate en este viaje donde encontrarás infinitas serendipias!</h5>
+                  </div>
+                  <form class="col s12 m12 xl7 offset-xl1">
                     <div class="row">
                       <div class="input-field col s12">
                         <input id="first_name" type="text" class="validate">
@@ -89,7 +97,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col s7 offset-s3">
+                      <div class="col s7 offset-s3 col m5 offset-m4 col l6 offset-l5">
                         <a id="btn-create-account" class="btn disabled margin-top margin-bottom btn-style-principal">Crear cuenta</a>
                       </div>
                     </div>
@@ -139,17 +147,17 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBVwTq6BZdhL7C5A2N1INmIdo5bhnr5vno",
-    authDomain: "serendipia-af4b4.firebaseapp.com",
-    databaseURL: "https://serendipia-af4b4.firebaseio.com",
-    projectId: "serendipia-af4b4",
-    storageBucket: "serendipia-af4b4.appspot.com",
-    messagingSenderId: "1097799929522"
-  };
-  firebase.initializeApp(config);
-</script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBVwTq6BZdhL7C5A2N1INmIdo5bhnr5vno",
+      authDomain: "serendipia-af4b4.firebaseapp.com",
+      databaseURL: "https://serendipia-af4b4.firebaseio.com",
+      projectId: "serendipia-af4b4",
+      storageBucket: "serendipia-af4b4.appspot.com",
+      messagingSenderId: "1097799929522"
+    };
+    firebase.initializeApp(config);
+  </script>
   <script type="text/javascript" src="../js/registro.js"></script>
 </html>

@@ -23,22 +23,34 @@ function begin() {
   });
 
   $('#btn-create-account').on('click', function() {
-    $(location).attr('href', 'home.html');
+    $(location).attr('href', 'splash-frases.html');
   });
 }
-
-// Login with google
-var provider = new firebase.auth.GoogleAuthProvider();
-$('#login-google').click(function() {
-  firebase.auth()
-    .signInWithPopup(provider)
-    .then(function(result) {
-      console.log(result.user);
-    });
-});
 
 $(document).ready(function() {
   $('.button-collapse').dropdown();
   $('.modal').modal();
   begin();
+
+  // Login with google
+  var provider = new firebase.auth.GoogleAuthProvider();
+  $('#login-google').click(function() {
+    firebase.auth()
+      .signInWithPopup(provider)
+      .then(function(result) {
+        console.log(result.user);
+        $('#login-google').hide();
+        window.location.href = '../views/splash-frases.html';
+      });
+  });
+
+  // Ésta función guarda automáticamente
+  function saveData(user) {
+    var user = {
+      name: user.displayName,
+      email: user.email,
+      uid: user.uid,
+      photo: user.photoURL
+    };
+  };
 });
