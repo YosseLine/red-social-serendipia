@@ -8,6 +8,8 @@ $(document).ready(function() {
   var $secondSection = $('.second-section');
   var $divContainerButtons = $('#div-container-buttons');
   var $buttonPublicar = $('#btn-publicar-perfil');
+  var $containerPost = $('#container-post');
+  var $textArea = $('#textarea1');
   console.log($divContainerButtons);
   // EVENTO click
   $buttonFotos.on('click', function(event) {
@@ -41,13 +43,18 @@ $(document).ready(function() {
     event.preventDefault();
     $('#file-perfil').click();
   });
+  // Evento click para que al hacer click al botton"sube"(perfil) se haga click a input file oculto
+  $('#file-select-foto').on('click', function(event) {
+    event.preventDefault();
+    $('#file-foto').click();
+  });
   // EVENTO PARA AGREGAR PORTADA(foto)
   $('#file-portada').change(function(event) {
     var fileName = event.target.files[0];
     var reader = new FileReader();
     reader.onload = function(event) {
       $('#preview-img').attr('src', event.target.result);
-      $('#foto-container').append('<img class = "col l4 s3 responsive-img" src= "' + event.target.result + '"/>');
+      $('#fotos-container').append('<img class = "col l4 s3 responsive-img" src= "' + event.target.result + '"/>');
     };
     reader.readAsDataURL(fileName);
   });
@@ -57,7 +64,16 @@ $(document).ready(function() {
     var reader = new FileReader();
     reader.onload = function(event) {
       $('#perfil-img').attr('src', event.target.result);
-      $('#foto-container').append('<img class = "col l4 s3 responsive-img" src= "' + event.target.result + '"/>');
+      $('#fotos-container').append('<img class = "col l4 s3 responsive-img" src= "' + event.target.result + '"/>');
+    };
+    reader.readAsDataURL(fileName);
+  });
+  // EVENTO PARA AGREGAR fotos (galeria de fotos)
+  $('#file-foto').change(function(event) {
+    var fileName = event.target.files[0];
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      $('#fotos-container').append('<img class = "col l4 s3 responsive-img" src= "' + event.target.result + '"/>');
     };
     reader.readAsDataURL(fileName);
   });
@@ -74,7 +90,10 @@ $(document).ready(function() {
   $buttonPublicar.on('click', function(event) {
     event.preventDefault();
     if ($textArea.val().length !== 0) {
-
+      $containerPost.append('<div class ="col s12 grey lighten-2 div-post"><p class ="col s12"> ' + $textArea.val() + ' </p><p class ="col s12">'+ new Date().getHours() + ':' + new Date().getMinutes() + ' horas' + '</p></div>');
     };
+    $textArea.val('');
+    $buttonPublicar.addClass('disabled', 'disabled');
   });
+
 });

@@ -75,6 +75,15 @@ input[type=file] {
 	width: 0;
 	z-index: -9999;
 }
+#container-post .div-post, .posts{
+ margin-top: 1.5rem;
+ padding: 1rem;
+ border: 1px solid rgb(62,176,96);
+ border-radius: 0.5rem;
+}
+.posts {
+  padding-bottom: 0;
+}
 @media (min-width: 993px) {
  img.responsive-img {
    max-width: 100%;
@@ -94,10 +103,17 @@ input[type=file] {
    width: 50%;
    margin-top: 1rem;
  }
- .img-portada {
 
- }
  .height-portada {
   height: 48vh;;
+ }
+ #container-post .div-post, .posts{
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid rgb(62,176,96);
+  border-radius: 0.5rem;
+ }
+ .posts {
+   padding-bottom: 0;
  }
 }

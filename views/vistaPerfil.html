@@ -96,8 +96,8 @@
     </div>
     <div class="container fotos">
       <div class="row">
-       <div class="col s12">
-          posts
+       <div id="container-post" class="col s12">
+        <!-- aqui van los post-->
        </div>
       </div>
     </div>
@@ -105,11 +105,14 @@
   <section class="third-section hide">
     <div class="container grey lighten-2">
       <div class="row">
-        <div id="foto-container"class="col s12 center-align">
-          <div class="btn blue file-field input-field">
-            <span><i class="material-icons right">arrow_upward</i>Subir foto</span>
-            <input type="file">
-              </div>
+        <div class="col s12 center-align">
+          <a href="#" id="file-select-foto" class="btn blue"><i class="material-icons right">arrow_upward</i>Subir fotos</a>
+        <form enctype="multipart/form-data">
+          <input id="file-foto" name="file" type="file"/>
+        </form>
+          <div class="col s12" id="fotos-container">
+            <!-- aqui van las fotos-->
+          </div>
         </div>
       </div>
     </div>
