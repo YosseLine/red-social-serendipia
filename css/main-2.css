@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+/*.... VISTA INDEX.HTML..*/
 /* ESTILOS AL BODY*/
 .height {
 	height: 100vh;
@@ -18,6 +19,42 @@
   background: linear-gradient(rgb(62,176,96)60%, rgb(14,80,34));
 }
 /*ESTILOS A MAIN*/
-img {
+img.img-splash {
   display:none;
+}
+/*.... VISTA PERFIL.HTML..*/
+.background-color {
+  background-color: rgb(62,176,96);
+}
+.put {
+  outline: 1px solid red;
+}
+.container-nav {
+  margin-left: 2rem;
+}
+.input-field .prefix.active {
+     color: #fff;
+}
+.container .row-portada {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  height: 26vh;
+  filter: opacity(60%);
+  background-image: url('../assets/images/portada-vacia.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%
+}
+.div-image {
+height: -webkit-fill-available;
+}
+.btn-fotos {
+  margin-bottom: 1rem;
+}
+textarea.materialize-textarea {
+  margin-bottom: 0px;;
+}
+.btn {
+  font-size: 0.9rem;
 }

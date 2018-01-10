@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Serendipia</title>
+    <!--Añadiendo color a la barra de navegador que se verá desde versión mobile-->
+    <meta name="theme-color" content="#3eb060"/>
+    <link rel="icon" type="image/png" href="../assets/images/infinity.png">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/main-2.css">
+</head>
+<body class="height">
+  <header>
+    <nav class="background-color navbar-fixed">
+      <div class="container-nav">
+       <div class="row nav-wrapper">
+         <div class="col s3 l4 xl4 div-image">
+           <a href=""><img src="../assets/images/logo.png" alt="logo" class="responsive-img"></a>
+         </div>
+         <div class="input-field col s5 l4 xl4">
+          <i class="material-icons prefix">search</i>
+          <input class="input" id="search" type="text" class="validate" placeholder="   Buscar">
+        </div>
+        <!--usuario solo visible en mobile-->
+        <a href="#!" class="col s1 hide-on-med-and-up"><i class="material-icons">account_circle</i></a>
+        <!--Menú hamburguesa solo visible en mobile-->
+        <a href="#" data-activates="dropdown2" class=" col s2 dropdown-button button-collapse pulse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#!"><i class="material-icons">account_circle</i></a></li>
+        <li><a href="#!"><i class="material-icons">notifications</i></a></li>
+        <li><a href="#!">Inicio</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">more_vert</i></a></li>
+      </ul>
+      <!--Lista desplegable para salir(cerrar sesión)-->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Salir</a></li>
+      </ul>
+      <!--Lista desplegable del MENÚ HAMBURGUESA-->
+      <ul class="dropdown-content" id="dropdown2">
+        <li><a href="#">Alertas</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#!">Salir</a></li>
+      </ul>
+       </div>
+      </div>
+    </nav>
+  </header>
+  <section class="section-first">
+    <div class="container">
+    <div class="row row-portada">
+      <div class=" col s12">
+        <a class="btn  grey lighten-2 file-field ">
+      <span><i class="material-icons">arrow_upward</i></span>
+      <input type="file">
+    </a>
+        <img src="" alt="" class="responsive-img">
+      </div>
+    </div>
+      <div class="row">
+        <div class="col s4">
+          <img src="../assets/images/perfil.png" alt="" class="responsive-img circle">
+        </div>
+        <div class="col s8 right-align">
+          <a class="waves-effect col s6 waves-light btn btn-fotos green accent-4 ">Fotos</a>
+          <a class="waves-effect col s6 waves-light btn green accent-4">Amigos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="second-section">
+   <div class="container posts grey lighten-2">
+     <div class="row">
+       <form class="col s12">
+         <div class="row">
+           <div class="input-field col s12 center-align">
+             <textarea id="textarea1" class="materialize-textarea"></textarea>
+             <label for="textarea1"><i class="material-icons left">account_circle</i>¿Cuéntanos lo que desees?</label>
+             <a class="btn blue file-field ">
+           <span><i class="material-icons right">arrow_upward</i>Foto</span>
+           <input type="file">
+         </a>
+             <a class="waves-effect waves-light btn btn blue"><i class="material-icons right">arrow_upward</i>Publicar</a>
+           </div>
+         </div>
+       </form>
+     </div>
+   </div>
+   <div class="container fotos">
+     <div class="row">
+       <div class="col s12">
+          posts
+       </div>
+     </div>
+  </section>
+  <secction class="third-section hide">
+    <div class="container grey lighten-2">
+      <div class="row">
+        <div class="col s12 center-align">
+          <div class="btn blue file-field input-field">
+        <span><i class="material-icons right">arrow_upward</i>Subir foto</span>
+        <input type="file">
+      </div>
+        </div>
+      </div>
+    </div>
+  </secction>
+  <!-- Vínculo de archivos js-->
+  <script type="text/javascript" src="../vendors/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/vistaPerfil.js"></script>
+</body>
+</html>
