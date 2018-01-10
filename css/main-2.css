@@ -36,16 +36,6 @@ img.img-splash {
   max-width: 100%;
   height: auto;
 }
-.container .row-portada {
-  margin-bottom: 0.5rem;
-  margin-left: 0;
-  margin-right: 0;
-  height: 26vh;
-  background-image: url('../assets/images/portada-vacia.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%
-}
 .div-image {
 height: -webkit-fill-available;
 }
@@ -53,7 +43,7 @@ height: -webkit-fill-available;
   margin-bottom: 1rem;
 }
 .height-portada{
-  height: 20vh;
+  height: 25vh;
 }
 textarea.materialize-textarea {
   margin-bottom: 0px;;
@@ -75,15 +65,22 @@ input[type=file] {
 	width: 0;
 	z-index: -9999;
 }
-#container-post .div-post, .posts{
+.btn-subir-foto {
+  margin:1rem;
+}
+#container-post .div-post, .posts, .gallery{
  margin-top: 1.5rem;
  padding: 1rem;
- border: 1px solid rgb(62,176,96);
+ border: 1px solid green;
  border-radius: 0.5rem;
 }
 .posts {
   padding-bottom: 0;
 }
+.responsive-image-post {
+  height: 30vh;
+}
+/* SOLO PARA DESKTOP DE LA VISTA PERFIL*/
 @media (min-width: 993px) {
  img.responsive-img {
    max-width: 100%;
@@ -103,7 +100,6 @@ input[type=file] {
    width: 50%;
    margin-top: 1rem;
  }
-
  .height-portada {
   height: 48vh;;
  }
@@ -115,5 +111,8 @@ input[type=file] {
  }
  .posts {
    padding-bottom: 0;
+ }
+ .responsive-image-post {
+   height: 50vh;
  }
 }

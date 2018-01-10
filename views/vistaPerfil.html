@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="../css/main-2.css">
 </head>
-<body class="height">
+<body class="height grey lighten-5">
+  <!--ENCABEZADO-->
   <header>
     <nav class="background-color navbar-fixed">
       <div class="container-nav">
@@ -50,9 +51,10 @@
       </div>
     </nav>
   </header>
+  <!-- FIRST SECTION-->
   <section class="section-first">
     <div class="container">
-      <div class="row row-porta grey lighten-3"  >
+      <div class="row"  >
         <div class="col s12 container-perfil-portada">
           <a href="#" id="file-select" class="btn grey lighten-2">Sube</a>
           <img id="preview-img"src="../assets/images/portada-vacia.png" alt="" class=" height-portada  col s12 l12 responsive-image">
@@ -76,18 +78,19 @@
       </div>
     </div>
   </section>
+  <!-- SECOND SECTION-->
   <section class="second-section">
-    <div class="container posts grey lighten-2">
+    <div class="container posts green lighten-5">
      <div class="row">
        <form class="col s12">
          <div class="row">
            <div class="input-field col s12 center-align">
              <textarea id="textarea1" class="materialize-textarea"></textarea>
              <label for="textarea1"><i class="material-icons left">account_circle</i>¿Cuéntanos lo que desees?</label>
-             <a class="btn blue file-field ">
-               <span><i class="material-icons right">arrow_upward</i>Foto</span>
-               <input type="file">
-             </a>
+             <a href="#" id="file-select-post-foto" class="btn blue"><i class="material-icons right">arrow_upward</i>Foto</a>
+             <form enctype="multipart/form-data">
+               <input id="file-post-foto" name="file" type="file"/>
+             </form>
              <a id="btn-publicar-perfil"class="waves-effect waves-light btn btn blue disabled"><i class="material-icons right">arrow_upward</i>Publicar</a>
            </div>
          </div>
@@ -102,14 +105,15 @@
       </div>
     </div>
   </section>
+  <!-- SECOND SECTION-->
   <section class="third-section hide">
-    <div class="container grey lighten-2">
+    <div class="container green lighten-5 gallery">
       <div class="row">
         <div class="col s12 center-align">
-          <a href="#" id="file-select-foto" class="btn blue"><i class="material-icons right">arrow_upward</i>Subir fotos</a>
-        <form enctype="multipart/form-data">
-          <input id="file-foto" name="file" type="file"/>
-        </form>
+          <a href="#" id="file-select-foto" class="btn blue btn-subir-foto"><i class="material-icons right">arrow_upward</i>Subir fotos</a>
+          <form enctype="multipart/form-data">
+            <input id="file-foto" name="file" type="file"/>
+          </form>
           <div class="col s12" id="fotos-container">
             <!-- aqui van las fotos-->
           </div>
@@ -117,7 +121,7 @@
       </div>
     </div>
   </section>
-  <!-- Modal Structure -->
+  <!-- MODAL ESTRUCTURE -->
   <div id="modal1" class="modal">
     <div class="modal-content grey lighten-2">
       <h5 class="center-align  green white-text">Amigos</h5>
