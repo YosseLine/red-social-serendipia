@@ -29,7 +29,7 @@ img.img-splash {
 header{
   position: fixed;
   width: 100%;
-  z-index: 998;
+  z-index: 1200;
 }
 .logo-header{
   width: 120px;
@@ -41,7 +41,10 @@ header{
 nav.navbar-fixed{
   height: 75px;
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(62,176,96);
+}
+.green{
+  background-color: rgb(62,176,96);
 }
 .background-cosmic{
   background-size: cover;

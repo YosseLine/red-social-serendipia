@@ -138,13 +138,13 @@ a#login-google{
 header{
   position: fixed;
   width: 100%;
-  z-index: 998;
+  z-index: 1200;
 }
 /*Clases para el nav*/
 nav.navbar-fixed{
   height: 75px;
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(62,176,96);
 }
 
 #registro .row{
@@ -243,7 +243,7 @@ i.large.heart{
 #home div.margin-top-5vh{
   margin-top: 5vh;
 }
- #home div.collapsible-header.padding-collapsible{
+ #home div.collapsible-header.padding-collapsible, #home div.collapsible-body.padding-collapsible{
   padding: 1rem 0.4rem;
 }
 

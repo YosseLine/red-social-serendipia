@@ -65,14 +65,14 @@
     <div class="container 100%">
       <div class="row height-row">
         <div class="col s12 container-perfil-portada">
-          <a href="#" id="file-select" class="btn grey lighten-2">Sube</a>
+          <a href="#" id="file-select" class="btn green lighten-2">Sube</a>
           <img id="preview-img"src="https://img.kpopmap.com/2015/03/ohmygirlprofile.jpg" alt="" class=" height-portada  col s12 l12 responsive-image">
         </div>
         <form enctype="multipart/form-data">
           <input id="file-portada" name="file" type="file"/>
         </form>
         <div class="col s4 container-perfil-portada translate">
-          <a href="#" id="file-select-perfil" class="btn grey lighten-2 button-save-photo">Sube</a>
+          <a href="#" id="file-select-perfil" class="btn green lighten-2 button-save-photo">Sube</a>
           <div class="height-perfil"><img id="perfil-img" src="https://i.pinimg.com/736x/0c/db/4f/0cdb4fe1bb54b149248e85a28698b229--girl-pics-my-girl.jpg" alt="" class="responsive-image circle"></div>
         </div>
         <form enctype="multipart/form-data" class="button-save-photo-input">
@@ -81,8 +81,8 @@
        </div>
        <div class="row height-10vh">
          <div id="div-container-buttons" class="col s8 center-align">
-           <a id="fotos"class="waves-effect col s6 btn blue btn-fotos">Fotos</a>
-           <a class="waves-effect col s6 btn blue modal-trigger" href="#modal1">Amigos</a>
+           <a id="fotos"class="waves-effect col s6 btn green btn-fotos">Fotos</a>
+           <a class="waves-effect col s6 btn green modal-trigger" href="#modal1">Amigos</a>
          </div>
        </div>
       </div>
@@ -98,11 +98,11 @@
              <div class="input-field center-align">
                <textarea id="textarea1" class="materialize-textarea"></textarea>
                <label for="textarea1"><i class="material-icons left">account_circle</i>¿Qué quieres compartir?</label>
-               <a href="#" id="file-select-post-foto" class="btn blue col s3"><i class="material-icons">camera_enhance</i></a>
+               <a href="#" id="file-select-post-foto" class="btn green col s3"><i class="material-icons">camera_enhance</i></a>
                <div enctype="multipart/form-data" class="col s1">
                  <input id="file-post-foto" name="file" type="file"/>
                </div>
-               <a id="btn-publicar-perfil"class="waves-effect waves-light btn btn blue disabled"><i class="material-icons right">arrow_upward</i>Publicar</a>
+               <a id="btn-publicar-perfil"class="waves-effect waves-light btn green disabled"><i class="material-icons right">arrow_upward</i>Publicar</a>
              </div>
            </div>
          </form>
@@ -122,7 +122,7 @@
     <div class="container white gallery">
       <div class="row">
         <div class="col s12 center-align">
-          <a href="#" id="file-select-foto" class="btn blue btn-subir-foto"><i class="material-icons right">arrow_upward</i>Subir fotos</a>
+          <a href="#" id="file-select-foto" class="btn green btn-subir-foto"><i class="material-icons right">arrow_upward</i>Subir fotos</a>
           <form enctype="multipart/form-data">
             <input id="file-foto" name="file" type="file"/>
           </form>
@@ -137,23 +137,26 @@
   <div id="modal1" class="modal">
     <div class="modal-content grey lighten-2">
       <h5 class="center-align">Amigos</h5>
-      <div class="collection">
-        <a class="collection-item avatar">
-          <img src="../assets/images/perfil.png" alt="" class="circle">
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="../assets/images/perfil.png" alt="" class=" responsive-img circle">
           <span class="title">Renato Tapia</span>
-        </a>
-        <a class="collection-item avatar">
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
           <img src="../assets/images/perfil.png" alt="" class=" responsive-img circle">
           <span class="title">Sofia Gabriela</span>
-        </a>
-        <a class="collection-item avatar">
-          <img src="../assets/images/perfil.png" alt="" class="circle">
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../assets/images/perfil.png" alt="" class=" responsive-img circle">
           <span class="title">María Alejandra</span>
-        </a>
-      </div>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+      </ul>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn blue white-text btn-flat">Cerrar</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn green white-text btn-flat">Cerrar</a>
     </div>
   </div>
   <!-- Vínculo de archivos js-->
