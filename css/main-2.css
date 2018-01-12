@@ -64,7 +64,7 @@ nav.navbar-fixed{
 height: -webkit-fill-available;
 }
 .translate{
-  transform: translateY(-90%);
+  transform: translateY(-60%);
 }
 .circle{
   height: 100px;
@@ -94,9 +94,9 @@ height: -webkit-fill-available;
   height: 10vh;
 }
 .button-save-photo{
-  transform: translateY(145%);
+  transform: translateY(220%);
   z-index: 998;
-  margin-left: 15px;
+  margin-left: 28px;
 }
 .button-save-photo-input{
   transform: translateY(-350%);
@@ -113,9 +113,7 @@ input[type=file] {
 }
 #container-post .div-post, .posts, .gallery{
  margin-top: 1.5rem;
- padding: 1rem;
- border: 1px solid green;
- border-radius: 0.5rem;
+ padding: 2rem;
 }
 .posts {
   padding-bottom: 0;
@@ -152,13 +150,17 @@ div.input-field.col.s12.center-align.green{
    height: 50vh;
  }
  .circle{
-   width: 150px;
-   height: 150px;
+   width: 200px;
+   height: 200px;
+ }
+ .height-portada{
+   height: 50vh;
  }
 }
+
 @media (min-width: 1200px) {
   .height-portada{
-    height: 50vh;
+    height: 55vh;
   }
   .third-section{
     margin-top: 40vh;

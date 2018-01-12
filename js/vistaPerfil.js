@@ -86,8 +86,8 @@ $(document).ready(function() {
     var fileName = event.target.files[0];
     var reader = new FileReader();
     reader.onload = function(event) {
-      $containerPost.append('<div class="card"><div class =" card-content"><p class ="col s12"> <img class = " col s12 responsive-image-post"src= "' + event.target.result + '"/></p><p class ="col s12">' + new Date().getHours() + ':' + new Date().getMinutes() + ' horas' + '</p></div></div>');
-      $('#fotos-container').append('<img class = "col s4 responsive-img" height= "5vh" src= "' + event.target.result + '"/>');
+      $containerPost.prepend('<div class ="col s12 white div-post"><p class ="col s12"> ' + $textArea.val() + ' </p><p class ="col s12"><img class = " col s12 responsive-image-post"src= "' + reader.result + '"/></p><p class ="col s12">' + new Date().getHours() + ':' + new Date().getMinutes() + ' horas' + '</p></div>');
+      $('#fotos-container').prepend('<img class = "col s4 responsive-img" height= "5vh" src= "' + event.target.result + '"/>');
     };
     reader.readAsDataURL(fileName);
   });
@@ -105,10 +105,7 @@ $(document).ready(function() {
   $buttonPublicar.on('click', function(event) {
     event.preventDefault();
     if ($textArea.val().length !== 0) {
-      var $hours = $('<div class ="col s12">' + new Date().getHours() + ':' + new Date().getMinutes() + ' horas' + '</div>');
-      var $cardPanel = $('<div class="card-panel"/>', {'html': $textArea.val()});
-      $cardPanel.append($hours);
-      $containerPost.append($cardPanel);
+      $containerPost.prepend('<div class ="col s12 white div-post"><p class ="col s12"> ' + $textArea.val() + ' </p><p class ="col s12">' + new Date().getHours() + ':' + new Date().getMinutes() + ' horas' + '</p></div>');
     };
     $textArea.val('');
     $buttonPublicar.addClass('disabled', 'disabled');
