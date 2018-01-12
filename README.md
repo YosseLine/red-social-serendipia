@@ -93,7 +93,7 @@ Para comenzar, cada una hizo su propio sketch, en el cuál plasmamos nuestras id
 
 **Sketch Maria Cristina**
 
-![Sketch](assets/docs/sketch-maria.jpg)
+![Sketch](assets/docs/sketch-maria.png)
 
 Por último, analizamos ambos sketchs y decidimos unir las mejores ideas:
 

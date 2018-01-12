@@ -7,9 +7,6 @@
 body{
   font-family: 'Josefin Sans', sans-serif;
 }
-body.grad{
-  background: linear-gradient( rgb(62,176,96)60%, rgb(14,80,34));
-}
 /*Estilos para la lista no ordenada de frases*/
 #tips, #tips li{
 	margin:0;
@@ -42,7 +39,101 @@ body.grad{
 .logo-header{
   width: 120px;
 }
+/*ESTILOS A VISTA PRINCIPAL*/
+body.coming-letter{
+  font-family: 'Coming Soon', cursive;
+}
+.overlay{
+  position:fixed;
+  background-size: cover;
+  background-position: center center;
+   background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');
+  -webkit-animation:100s scroll infinite linear;
+  -moz-animation:100s scroll infinite linear;
+  -o-animation:100s scroll infinite linear;
+  -ms-animation:100s scroll infinite linear;
+  animation:100s scroll infinite linear;
+  top:0;
+  left:0;
+  width:100%;
+ height:100%;
+}
 
+
+@-webkit-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@-moz-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@-o-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@-ms-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+.font-white{
+  color: #FFF;
+}
+#principal .img-principal{
+  width: 20rem;
+}
+.background-cosmic{
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');
+}
+/*ESTILOS PARA EL MODAL INICIAR SESION*/
+#modal-sesion form.col.s12 div.input-field.col.s12 input{
+  border-bottom: 1px solid #000;
+}
+#modal-sesion .input-field label {
+  color: #000;
+}
+/* label focus color */
+#modal-sesion .input-field.col.s12 input[type=text]:focus + label, .input-field.col.s12 input[type=email]:focus + label, .input-field.col.s12 input[type=password]:focus + label {
+     color: #000;
+   }
+/* valid color */
+  #modal-sesion .input-field.col.s12 input[type=text]:focus, .input-field.col.s12 input[type=email]:focus, .input-field.col.s12 input[type=password]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  #modal-sesion [type="radio"]:not(:checked)+label, [type="radio"]:checked+label, [type="checkbox"]+label{
+    color: #000;
+  }
+a.btn-style-principal{
+  border-radius: 10px;
+}
+a#login-google{
+  margin-top: 30px;
+}
+.modal{
+  max-height: 87%;
+}
+.img-modal-user{
+  width: 10rem;
+  margin-left: 16vw;
+}
 /*Clases para vista resgistro*/
 header{
   position: fixed;
@@ -50,22 +141,12 @@ header{
   z-index: 998;
 }
 /*Clases para el nav*/
-nav{
-  background-color: rgb(62,176,96);
-  height: 80px;
-  padding: 10px;
+nav.navbar-fixed{
+  height: 75px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
-main#registro.container-flex-column{
-  background-image: url('https://i.pinimg.com/originals/f7/80/06/f7800630afae01ea3235e26a613a62ed.jpg');
-  /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
-  background-position: center center;
-  /* Para que la imagen de fondo no se repita */
-  background-repeat: no-repeat;
-  /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
-  background-attachment: fixed;
-  /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
-  background-size: cover;
-}
+
 #registro .row{
   margin-bottom: 0;
 }
@@ -81,38 +162,27 @@ main#registro.container-flex-column{
 .margin-bottom{
   margin-bottom: 10px;
 }
-form.col.s12 div.input-field.col.s12 input{
-  border-bottom: 1px solid #000;
+#registro form.col.s12 div.input-field.col.s12 input{
+  border-bottom: 1px solid #FFF;
 }
-.input-field label {
-  color: #000;
+#registro .input-field label {
+  color: #FFF;
 }
 /* label focus color */
-.input-field.col.s12 input[type=text]:focus + label, .input-field.col.s12 input[type=email]:focus + label, .input-field.col.s12 input[type=password]:focus + label {
-     color: #000;
+#registro .input-field.col.s12 input[type=text]:focus + label, .input-field.col.s12 input[type=email]:focus + label, .input-field.col.s12 input[type=password]:focus + label {
+     color: #FFF;
    }
 /* valid color */
-  .input-field.col.s12 input[type=text]:focus, .input-field.col.s12 input[type=email]:focus, .input-field.col.s12 input[type=password]:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
+  #registro .input-field.col.s12 input[type=text]:focus, .input-field.col.s12 input[type=email]:focus, .input-field.col.s12 input[type=password]:focus {
+    border-bottom: 1px solid #FFF;
+    box-shadow: 0 1px 0 0 #FFF;
   }
-  [type="radio"]:not(:checked)+label, [type="radio"]:checked+label, [type="checkbox"]+label{
-    color: #000;
+  #registro [type="radio"]:not(:checked)+label, [type="radio"]:checked+label, [type="checkbox"]+label{
+    color: #FFF;
   }
-a.btn-style-principal{
-  background-color: rgb(62,176,96);
-  border-radius: 10px;
-}
-/*Estilos para modal Iniciar sesión*/
-div#modal-sesion.modal{
-  background-color: rgb(195,203,222);
-}
-a#login-google{
-  margin-top: 30px;
-}
 /*Estilos para vista Home*/
-.background-grey{
-  background-color: rgb(236,235,235);
+.padding-top-main{
+  padding-top: 75px;
 }
 .margin-btm-0{
   margin-bottom: 0;
@@ -120,8 +190,20 @@ a#login-google{
 .margin-top-0{
   margin-top: 0;
 }
+.margin-right-0{
+  margin-right: 0
+}
+.margin-left-0{
+  margin-left: 0;
+}
 section{
-  padding-top: 80px;
+  padding-top: 70px;
+}
+textarea.materialize-textarea{
+  margin: 0;
+}
+div.card-action.card-action-padding{
+  padding: 16px 10px;
 }
 img.responsive-img.imagen-circle {
     height: 100px;
@@ -134,14 +216,7 @@ img.responsive-img.imagen-circle {
   width: 120px;
   height: 100px;
 }
-.height-image{
-  height: -webkit-fill-available;
-}
-.style-card{
-  border: 1px solid green;
-  border-radius: 15px;
-  background-color: rgba(62,176,96,0.1);
-}
+
 i.large.heart{
   font-size: 20px;
   color: red;
@@ -152,21 +227,36 @@ i.large.heart{
 .width-btn{
   width: 46%;
 }
+#home div.card.height-card-post{
+  height: 28vh;
+}
 #home form div.btn.col.s3{
   font-size: 10px;
 }
 #home textarea.materialize-textarea:focus{
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
+  border-bottom: 1px solid #FFF;
+  box-shadow: 0 1px 0 0 #FFF;
 }
 #home textarea.materialize-textarea:focus + label{
-  color: #000;
+  color: #FFF;
 }
+#home div.margin-top-5vh{
+  margin-top: 5vh;
+}
+ #home div.collapsible-header.padding-collapsible{
+  padding: 1rem 0.4rem;
+}
+
 @media only screen and (min-width: 601px) {
 .container {
     width: 90%;
 }
+}
 @media (min-width: 768px) {
+  /*Estilos para modal iniciar sesión*/
+  .img-modal-user{
+    margin-left: 30vw;
+  }
   #registro form{
   font-size: 1.2rem;
   }
@@ -177,13 +267,24 @@ i.large.heart{
     font-size: 1.2rem;
   }
   img.responsive-img.imagen-circle{
+    margin-left: 1.5vw;
     width: 150px;
     height: 150px;
   }
+  #home div.card.height-card-post {
+    height: 18vh;
+}
+#home div.collapsible-header.padding-collapsible {
+    padding: 1rem 4rem;
+}
 }
 @media (min-width: 992px) {
   header nav ul a{
     font-size: 1.2rem;
+  }
+  /*Estilos para modal iniciar sesión*/
+  .img-modal-user{
+    margin-left: 20vw;
   }
   .container-registro .container{
     width: 90%;
@@ -213,9 +314,12 @@ i.large.heart{
     margin-top: 2vh;
     border-radius: 15px;
   }
-  #home .height-card-post{
-    height: 17.7vh;
-  }
+  #home div.card.height-card-post {
+    height: 14vh;
+}
+#home div.margin-top-5vh{
+  margin-top: 3.5vh;
+}
 }
 @media (min-width: 1200px) {
   #registro form{
@@ -236,4 +340,10 @@ i.large.heart{
  img.responsive-img.imagen-circle{
    margin-left: 8vw;
  }
+ #home div.card.height-card-post {
+    height: 28vh;
+}
+#home div.margin-top-5vh {
+    margin-top: 8vh;
+}
 }

@@ -16,18 +16,42 @@
   align-items: center;
 }
 .color-fond {
-  background: linear-gradient(rgb(62,176,96)60%, rgb(14,80,34));
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 /*ESTILOS A MAIN*/
 img.img-splash {
   display:none;
 }
 /*.... VISTA PERFIL.HTML..*/
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 998;
+}
+.logo-header{
+  width: 120px;
+}
+.padding-top-section{
+  padding-top: 75px;
+}
+/*Clases para el nav*/
+nav.navbar-fixed{
+  height: 75px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.background-cosmic{
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');
+}
 .background-color {
   background-color: rgb(62,176,96);
-}
-.container-nav {
-  margin-left: 2rem;
 }
 .input-field .prefix.active {
      color: #fff;
@@ -39,14 +63,18 @@ img.img-splash {
 .div-image {
 height: -webkit-fill-available;
 }
+.translate{
+  transform: translateY(-90%);
+}
+.circle{
+  height: 100px;
+  width: 100px;
+}
 .btn-fotos {
   margin-bottom: 1rem;
 }
 .height-portada{
   height: 25vh;
-}
-textarea.materialize-textarea {
-  margin-bottom: 0px;;
 }
 .btn {
   font-size: 0.9rem;
@@ -59,8 +87,23 @@ textarea.materialize-textarea {
     left:20px;
     display: none;
 }
+.height-row{
+  height: 20vh;
+}
+.height-10vh{
+  height: 10vh;
+}
+.button-save-photo{
+  transform: translateY(145%);
+  z-index: 998;
+  margin-left: 15px;
+}
+.button-save-photo-input{
+  transform: translateY(-350%);
+  z-index: 1000;
+  margin-left: 15px;
+}
 input[type=file] {
-    position: absolute;
 	visibility: hidden;
 	width: 0;
 	z-index: -9999;
@@ -80,16 +123,21 @@ input[type=file] {
 .responsive-image-post {
   height: 30vh;
 }
+div.input-field.col.s12.center-align.green{
+  margin-top: 0;
+}
+.third-section{
+  margin-top: 10vh;
+}
 /* SOLO PARA DESKTOP DE LA VISTA PERFIL*/
 @media (min-width: 993px) {
- img.responsive-img {
+  .container{
+    width: 90%;
+  }
+ #perfil img.responsive-img {
    max-width: 100%;
-   height: 10vh;
  }
- .responsive-image {
-   max-width: 100%;
-   height: 20vh;
- }
+
  .btn {
    font-size: 1.2rem;
  }
@@ -97,19 +145,22 @@ input[type=file] {
    width: 50%;
    margin-top: 1rem;
  }
- .height-portada {
-  height: 50vh;;
- }
- #container-post .div-post, .posts{
-  margin-top: 2rem;
-  padding: 2rem;
-  border: 1px solid rgb(62,176,96);
-  border-radius: 0.5rem;
- }
  .posts {
    padding-bottom: 0;
  }
  .responsive-image-post {
    height: 50vh;
  }
+ .circle{
+   width: 150px;
+   height: 150px;
+ }
+}
+@media (min-width: 1200px) {
+  .height-portada{
+    height: 50vh;
+  }
+  .third-section{
+    margin-top: 40vh;
+  }
 }

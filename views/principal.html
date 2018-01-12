@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Serendipia - Registro</title>
+    <!--Añadiendo color a la barra de navegador que se verá desde versión movile-->
+    <meta name="theme-color" content="#3eb060"/>
+    <link rel="icon" type="image/png" href="../assets/images/infinity.png">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main-1.css">
+  </head>
+  <body class="vh100 overlay coming-letter">
+    <header>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#modal-sesion" class="modal-trigger">Iniciar Sesión</a></li>
+        <li><a href="#!">Sobre nosotros</a></li>
+      </ul>
+      <nav class="navbar-fixed">
+        <div class="nav-wrapper">
+          <img class="responsive-img logo-header" src="../assets/images/logo.png" alt="Serendipia">
+          <ul class="right hide-on-med-and-up">
+            <li><a href="#!" data-activates="dropdown1" class="button-collapse"><i class="material-icons">menu</i></a></li>
+          </ul>
+          <ul class="right show-on-medium-and-up hide-on-small-only">
+              <li><a href="#modal-sesion" class="modal-trigger iniciar-sesion">Iniciar sesión</a></li>
+              <li><a href="#">Sobre nosotros</a></li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+    <main id="principal" class="container-flex-column">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div>
+              <h3 class="center-align font-white">Sé parte de <br> <img src="../assets/images/logo.png" alt="" class="responsive-img img-principal"></h3>
+              <h5 class="center-align font-white">¡Crea tu cuenta y conoce gente como tú!</h5>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s7 m4 offset-s3 offset-m5">
+            <a id="btn-create-account" class="btn btn-style-principal">Crear cuenta</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--Modal de iniciar sesión-->
+    <div id="modal-sesion" class="modal">
+      <div class="modal-content">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right">Cerrar</a>
+          <img class="img-modal-user responsive-img" src="../assets/images/user.png" alt="User">
+        <div class="row">
+          <form class="col s12 col m8 offset-m2">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="person" type="text" class="validate">
+                <label for="person">Nombre de usuario</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="lock" type="password" class="validate">
+                <label for="lock">Contraseña</label>
+              </div>
+            </div>
+            <div class="row">
+              <a id="login-account" class="waves-effect btn disabled col s6 offset-s3 btn-style-principal">Iniciar Sesión</a>
+              <br>
+              <a id="login-google" class="waves-effect btn col s12 btn-style-principal">Iniciar Sesión con Google</a>
+              <br>
+              <p class="col s12 margin-top">¿Olvidaste tu contraseña? <a href="#">Click aquí</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="../vendors/jQuery/jquery-3.2.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBVwTq6BZdhL7C5A2N1INmIdo5bhnr5vno",
+      authDomain: "serendipia-af4b4.firebaseapp.com",
+      databaseURL: "https://serendipia-af4b4.firebaseio.com",
+      projectId: "serendipia-af4b4",
+      storageBucket: "serendipia-af4b4.appspot.com",
+      messagingSenderId: "1097799929522"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script type="text/javascript" src="../js/principal.js"></script>
+</html>
