@@ -141,8 +141,7 @@ Por último, analizamos ambos sketchs y decidimos unir las mejores ideas:
 
 7. Testeo con usuarios: Producto final
 
-* Se testeó con los mismos usuarios(2), quedo el prototipo e hubo un cambio:
-en la vista de registro, recomiendan colocar una imagen de fondo algo opaco.
+* Se testeó con los mismos usuarios(2), quedó el prototipo y  se cambió lo siguiente: el fondo de todas las vistas.
 
 ***
 
