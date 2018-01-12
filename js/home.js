@@ -109,14 +109,14 @@ $(document).ready(function() {
   });
 
   // Función que subirá fotos a la página
-  $filePhotoMobile.change(function() {
+  $filePhotoMovile.change(function() {
     var $card = $('<div class= "card"></div>');
     var $cardContent = $('<div class= "card-content"></div>');
     var fileName = event.target.files[0];
     var reader = new FileReader();
     var $photoContainer = $('<div/>');
     reader.onload = function(event) {
-      $photoContainer.append('<img class = "col s6 responsive-img image-style" src= "' + event.target.result + '"/>');
+      $photoContainer.append('<img class = "col s12 responsive-img image-style" src= "' + event.target.result + '"/>');
       $cardContent.append($photoContainer);
       $card.append($cardContent);
       $card.addClass('style-card');
