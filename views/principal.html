@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
     <link rel="stylesheet" href="../css/main-1.css">
   </head>
-  <body class="vh100 overlay coming-letter">
+  <body class="vh100 coming-letter background-cosmic">
     <header>
       <!-- Dropdown Structure -->
       <ul id="dropdown1" class="dropdown-content">
@@ -25,7 +25,9 @@
       </ul>
       <nav class="navbar-fixed">
         <div class="nav-wrapper">
-          <img class="responsive-img logo-header" src="../assets/images/logo.png" alt="Serendipia">
+          <figure class="inline-block">
+            <img class="responsive-img logo-header" src="../assets/images/seren.png" alt="Serendipia">
+          </figure>
           <ul class="right hide-on-med-and-up">
             <li><a href="#!" data-activates="dropdown1" class="button-collapse"><i class="material-icons">menu</i></a></li>
           </ul>
@@ -36,19 +38,19 @@
         </div>
       </nav>
     </header>
-    <main id="principal" class="container-flex-column">
+    <main id="particles-js" class="container-flex-column">
       <div class="container">
         <div class="row">
           <div class="col s12">
             <div>
-              <h3 class="center-align font-white">Sé parte de <br> <img src="../assets/images/logo.png" alt="" class="responsive-img img-principal"></h3>
+              <h3 class="center-align font-white center__text glitch is-glitching" data-text="Hover me!">Sé parte de <br> <img src="../assets/images/seren.png" alt="" class="responsive-img img-principal"></h3>
               <h5 class="center-align font-white">¡Crea tu cuenta y conoce gente como tú!</h5>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col s7 m4 offset-s3 offset-m5">
-            <a id="btn-create-account" class="btn green btn-style-principal">Crear cuenta</a>
+            <a id="btn-create-account-principal" class="btn green btn-style-principal">Crear cuenta</a>
           </div>
         </div>
       </div>
@@ -98,5 +100,7 @@
     };
     firebase.initializeApp(config);
   </script>
+  <script type="text/javascript" src="../js/particles.js"></script>
+  <script type="text/javascript" src="../js/particles-2.js"></script>
   <script type="text/javascript" src="../js/principal.js"></script>
 </html>

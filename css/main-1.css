@@ -7,6 +7,28 @@
 body{
   font-family: 'Josefin Sans', sans-serif;
 }
+/*Estilos para el nav*/
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 1200;
+}
+/*Clases para el nav*/
+nav.navbar-fixed{
+  height: 75px;
+  padding: 10px;
+  background-color: rgba(62,176,96,0.3);
+}
+/*Estilos para vista principal*/
+#particles-js .img-principal{
+  width: 12rem;
+}
+#particles-js{
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
 /*Estilos para la lista no ordenada de frases*/
 #tips, #tips li{
 	margin:0;
@@ -33,68 +55,6 @@ body{
 	justify-content: center;
   align-items: center;
 }
-.vh100 {
-	height: 100vh;
-}
-.logo-header{
-  width: 120px;
-}
-/*ESTILOS A VISTA PRINCIPAL*/
-body.coming-letter{
-  font-family: 'Coming Soon', cursive;
-}
-.overlay{
-  position:fixed;
-  background-size: cover;
-  background-position: center center;
-   background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');
-  -webkit-animation:100s scroll infinite linear;
-  -moz-animation:100s scroll infinite linear;
-  -o-animation:100s scroll infinite linear;
-  -ms-animation:100s scroll infinite linear;
-  animation:100s scroll infinite linear;
-  top:0;
-  left:0;
-  width:100%;
- height:100%;
-}
-
-
-@-webkit-keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-  }
-}
-
-@-moz-keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-  }
-}
-
-@-o-keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-  }
-}
-
-@-ms-keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-  }
-}
-
-@keyframes scroll{
-  100%{
-    background-position:0px -3000px;
-  }
-}
-.font-white{
-  color: #FFF;
-}
-#principal .img-principal{
-  width: 20rem;
-}
 .background-cosmic{
   background-size: cover;
   background-attachment: fixed;
@@ -102,23 +62,43 @@ body.coming-letter{
   background-position: center;
   background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');
 }
+.vh100 {
+	height: 100vh;
+}
+.logo-header{
+  width:  4rem;
+}
+.inline-block{
+  display: inline-block;
+}
+figure.inline-block {
+    margin: 0rem 1rem;
+}
+/*ESTILOS A VISTA PRINCIPAL*/
+body.coming-letter{
+  font-family: 'Coming Soon', cursive;
+}
+
+.font-white{
+  color: #FFF;
+}
 /*ESTILOS PARA EL MODAL INICIAR SESION*/
-#modal-sesion form.col.s12 div.input-field.col.s12 input{
+#registro #modal-sesion form.col.s12 div.input-field.col.s12 input{
   border-bottom: 1px solid #000;
 }
-#modal-sesion .input-field label {
+#registro #modal-sesion .input-field label {
   color: #000;
 }
 /* label focus color */
-#modal-sesion .input-field.col.s12 input[type=text]:focus + label, .input-field.col.s12 input[type=email]:focus + label, .input-field.col.s12 input[type=password]:focus + label {
+#registro #modal-sesion .input-field.col.s12 input[type=text]:focus + label, .input-field.col.s12 input[type=email]:focus + label, .input-field.col.s12 input[type=password]:focus + label {
      color: #000;
    }
 /* valid color */
-  #modal-sesion .input-field.col.s12 input[type=text]:focus, .input-field.col.s12 input[type=email]:focus, .input-field.col.s12 input[type=password]:focus {
+  #registro #modal-sesion .input-field.col.s12 input[type=text]:focus, .input-field.col.s12 input[type=email]:focus, .input-field.col.s12 input[type=password]:focus {
     border-bottom: 1px solid #000;
     box-shadow: 0 1px 0 0 #000;
   }
-  #modal-sesion [type="radio"]:not(:checked)+label, [type="radio"]:checked+label, [type="checkbox"]+label{
+  #registro #modal-sesion [type="radio"]:not(:checked)+label, [type="radio"]:checked+label, [type="checkbox"]+label{
     color: #000;
   }
 a.btn-style-principal{
@@ -135,17 +115,7 @@ a#login-google{
   margin-left: 16vw;
 }
 /*Clases para vista resgistro*/
-header{
-  position: fixed;
-  width: 100%;
-  z-index: 1200;
-}
-/*Clases para el nav*/
-nav.navbar-fixed{
-  height: 75px;
-  padding: 5px;
-  background-color: rgb(62,176,96);
-}
+
 
 #registro .row{
   margin-bottom: 0;

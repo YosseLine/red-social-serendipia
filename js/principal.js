@@ -3,21 +3,17 @@ $(document).ready(function() {
   var $password = $('#password');
   $('.button-collapse').dropdown();
   $('.modal').modal();
-  begin();
   var $loginAccount = $('#login-account');
-  var $btnCreateAccount = $('#btn-create-account');
+  var $btnCreateAccountPrincipal = $('#btn-create-account-principal');
   var $person = $('#person');
   var $lock = $('#lock');
   // Variables booleanas para la activación del button
   var validatePerson = false;
   var validateLock = false;
 
-  // Funión para guardar los datos del usuario.
-  $btnCreateAccount.on('click', function() {
-    event.preventDefault();
-    localStorage.firstName = $firstName.val();
-    localStorage.password = $password.val();
-    alert('¡Bienvenid@ a Serendipia! Por favor inicia sesión :)');
+  // Función para guardar los datos del usuario.
+  $btnCreateAccountPrincipal.on('click', function() {
+    window.location.href = '../views/registro.html';
   });
 
   $person.on('input', function() {
