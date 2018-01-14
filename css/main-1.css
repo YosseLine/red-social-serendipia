@@ -3,6 +3,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+/*Clases reutilizables*/
+.container-flex-column{
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.background-cosmic{
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center;
+background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');
+}
+.vh100 {
+height: 100vh;
+}
+.logo-header{
+width:  4rem;
+}
+.inline-block{
+display: inline-block;
+}
+figure.inline-block {
+  margin: 0rem 1rem;
+}
+body.coming-letter{
+font-family: 'Coming Soon', cursive;
+}
+.font-white{
+color: #FFF;
+}
+.margin-left{
+  margin-left: 20px;
+}
+.margin-top{
+  margin-top: 20px;
+}
+.margin-bottom{
+  margin-bottom: 10px;
+}
 /*Estilos para body*/
 body{
   font-family: 'Josefin Sans', sans-serif;
@@ -11,7 +53,7 @@ body{
 header{
   position: fixed;
   width: 100%;
-  z-index: 1200;
+  z-index: 1000;
 }
 /*Clases para el nav*/
 nav.navbar-fixed{
@@ -28,7 +70,72 @@ nav.navbar-fixed{
   height: 100%;
   z-index: 999;
 }
-
+/*Estilos para la vista registro*/
+.padding-space-header{
+  padding-top: 75px;
+}
+[type="checkbox"]+label.font-white {
+    color: #FFF;
+}
+#registro .row{
+  margin-bottom: 0;
+}
+#registro form.form-register div.input-field.col.s12 input.validate.font-white{
+  border-bottom: 1px solid #FFF;
+}
+#registro form.form-register div.input-field.col.s12 input.validate.font-white label.font-white {
+  color: #FFF;
+}
+#registro .input-field label.font-white{
+  color: #FFF;
+}
+/* label focus color */
+#registro div.input-field.col.s12 input.validate.font-white[type=text]:focus + label.font-white, .input-field.col.s12 input.validate.font-white[type=email]:focus + label.font-white, .input-field.col.s12 input.validate.font-white[type=password]:focus + label.font-white {
+  color: #FFF;
+}
+/* valid color */
+#registro div.input-field.col.s12 input.validate.font-white[type=text]:focus, .input-field.col.s12 input.validate.font-white[type=email]:focus, .input-field.col.s12 input.validate.font-white[type=password]:focus {
+  border-bottom: 1px solid #FFF;
+  box-shadow: 0 1px 0 0 #FFF;
+}
+  #registro [type="radio"]:not(:checked)+label.font-white, [type="radio"]:checked+label.font-white, [type="checkbox"]+label.font-white{
+  color: #FFF;
+}
+#registro [type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
+  border: 2px solid #FFF;
+}
+#registro [type="checkbox"].filled-in:not(:checked)+label:after{
+  border: 2px solid #FFF;
+}
+/*ESTILOS PARA EL MODAL INICIAR SESION*/
+#modal-sesion form.col.s12 div.input-field.col.s12 input{
+  border-bottom: 1px solid #000;
+}
+#registro #modal-sesion .input-field label {
+  color: #000;
+}
+/* label focus color */
+#modal-sesion .input-field.col.s12 input[type=text]:focus + label, .input-field.col.s12 input[type=email]:focus + label, .input-field.col.s12 input[type=password]:focus + label {
+   color: #000;
+  }
+/* valid color */
+#modal-sesion .input-field.col.s12 input[type=text]:focus, .input-field.col.s12 input[type=email]:focus, .input-field.col.s12 input[type=password]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+#modal-sesion [type="radio"]:not(:checked)+label, [type="radio"]:checked+label, [type="checkbox"]+label{
+  color: #000;
+}
+a.btn-style-principal{
+  border-radius: 10px;
+}
+a#login-google{
+  margin-top: 2vh;
+  font-size: 0.8rem;
+}
+.modal{
+  max-height: 87%;
+}
 /*Estilos para la lista no ordenada de frases*/
 #tips, #tips li{
 	margin:0;
@@ -47,109 +154,6 @@ nav.navbar-fixed{
   text-shadow: #99FFCC 0px 0px 10px;
   text-shadow: #99FFCC 0px 0px 10px 10px;
 	}
-  /*Clases reutilizables*/
-.container-flex-column{
-  height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-  align-items: center;
-}
-.background-cosmic{
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg');
-}
-.vh100 {
-	height: 100vh;
-}
-.logo-header{
-  width:  4rem;
-}
-.inline-block{
-  display: inline-block;
-}
-figure.inline-block {
-    margin: 0rem 1rem;
-}
-/*ESTILOS A VISTA PRINCIPAL*/
-body.coming-letter{
-  font-family: 'Coming Soon', cursive;
-}
-
-.font-white{
-  color: #FFF;
-}
-/*ESTILOS PARA EL MODAL INICIAR SESION*/
-#registro #modal-sesion form.col.s12 div.input-field.col.s12 input{
-  border-bottom: 1px solid #000;
-}
-#registro #modal-sesion .input-field label {
-  color: #000;
-}
-/* label focus color */
-#registro #modal-sesion .input-field.col.s12 input[type=text]:focus + label, .input-field.col.s12 input[type=email]:focus + label, .input-field.col.s12 input[type=password]:focus + label {
-     color: #000;
-   }
-/* valid color */
-  #registro #modal-sesion .input-field.col.s12 input[type=text]:focus, .input-field.col.s12 input[type=email]:focus, .input-field.col.s12 input[type=password]:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-  }
-  #registro #modal-sesion [type="radio"]:not(:checked)+label, [type="radio"]:checked+label, [type="checkbox"]+label{
-    color: #000;
-  }
-a.btn-style-principal{
-  border-radius: 10px;
-}
-a#login-google{
-  margin-top: 30px;
-}
-.modal{
-  max-height: 87%;
-}
-.img-modal-user{
-  width: 10rem;
-  margin-left: 16vw;
-}
-/*Clases para vista resgistro*/
-
-
-#registro .row{
-  margin-bottom: 0;
-}
-.container-registro{
-  margin-top: 80px;
-}
-.margin-left{
-  margin-left: 20px;
-}
-.margin-top{
-  margin-top: 20px;
-}
-.margin-bottom{
-  margin-bottom: 10px;
-}
-#registro form.col.s12 div.input-field.col.s12 input{
-  border-bottom: 1px solid #FFF;
-}
-#registro .input-field label {
-  color: #FFF;
-}
-/* label focus color */
-#registro .input-field.col.s12 input[type=text]:focus + label, .input-field.col.s12 input[type=email]:focus + label, .input-field.col.s12 input[type=password]:focus + label {
-     color: #FFF;
-   }
-/* valid color */
-  #registro .input-field.col.s12 input[type=text]:focus, .input-field.col.s12 input[type=email]:focus, .input-field.col.s12 input[type=password]:focus {
-    border-bottom: 1px solid #FFF;
-    box-shadow: 0 1px 0 0 #FFF;
-  }
-  #registro [type="radio"]:not(:checked)+label, [type="radio"]:checked+label, [type="checkbox"]+label{
-    color: #FFF;
-  }
 /*Estilos para vista Home*/
 .padding-top-main{
   padding-top: 75px;
@@ -236,10 +240,8 @@ i.large.heart{
   #registro form [type="checkbox"]+label, #registro form [type="radio"]:not(:checked)+label, #registro form [type="radio"]:checked+label{
     font-size: 1.2rem;
   }
-  img.responsive-img.imagen-circle{
-    margin-left: 1.5vw;
-    width: 150px;
-    height: 150px;
+  a#login-google{
+    font-size: 1rem;
   }
   #home div.card.height-card-post {
     height: 18vh;
@@ -259,15 +261,7 @@ i.large.heart{
   .container-registro .container{
     width: 90%;
   }
-  #registro form{
-  font-size: 1.2rem;
-  }
-  #registro form.col.s12 div.input-field.col.s12 label{
-  font-size: 1.2rem;
-  }
-  #registro form [type="checkbox"]+label, #registro form [type="radio"]:not(:checked)+label, #registro form [type="radio"]:checked+label{
-    font-size: 1.2rem;
-  }
+
   #home div.card.horizonta.style-card{
     margin-top: 2vh;
   }
