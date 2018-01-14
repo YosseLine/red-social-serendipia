@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('.dropdown-button').dropdown();
+  // $('ul.tabs').tabs('select_tab', 'tab_id');
   // MODAL AMIGOS
   $('.modal').modal();
   // SELECCION DE ELEMENTOS GUARDADOS EN VARIBALES

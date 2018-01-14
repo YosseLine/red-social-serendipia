@@ -32,16 +32,28 @@ header{
   z-index: 1200;
 }
 .logo-header{
-  width: 120px;
+  width: 4rem;
+}
+.inline-block{
+display: inline-block;
+}
+figure.inline-block {
+  margin: 0rem 1rem;
 }
 .padding-top-section{
   padding-top: 75px;
 }
+#perfil .tabs .tab a:hover, .tabs .tab a.active, .tabs .tab a, .tabs .indicator {
+    color: rgb(62,176,96) !important;
+}
+#perfil .tabs .indicator {
+    background-color: rgb(62,176,96) !important;
+}
 /*Clases para el nav*/
 nav.navbar-fixed{
   height: 75px;
-  padding: 5px;
-  background-color: rgb(62,176,96);
+  padding: 10px;
+  background-color: rgba(62,176,96,0.3);
 }
 .green{
   background-color: rgb(62,176,96);
@@ -59,25 +71,23 @@ nav.navbar-fixed{
 .input-field .prefix.active {
      color: #fff;
 }
-.responsive-image {
-  max-width: 100%;
-  height: auto;
-}
-.div-image {
-height: -webkit-fill-available;
-}
 .translate{
-  transform: translateY(-60%);
+  transform: translateY(-90%);
 }
-.circle{
-  height: 100px;
-  width: 100px;
+a.btn-style-principal{
+  border-radius: 10px;
+}
+.circle-img{
+  height: 120px !important;
+  width: 120px !important;
+  border: 5px solid rgb(62,176,96);
 }
 .btn-fotos {
   margin-bottom: 1rem;
 }
 .height-portada{
   height: 25vh;
+  background-size: cover;
 }
 .btn {
   font-size: 0.9rem;
@@ -85,7 +95,7 @@ height: -webkit-fill-available;
 .container-perfil-portada {
     position: relative;
 }
-.container-perfil-portada a {
+.2 a {
     position: absolute;
     left:20px;
     display: none;
@@ -96,10 +106,18 @@ height: -webkit-fill-available;
 .height-10vh{
   height: 10vh;
 }
+.font-white{
+  color: #FFF;
+}
+.absolute{
+  position: absolute;
+}
+.margin-btm-0{
+  margin-bottom: 0;
+}
 .button-save-photo{
   transform: translateY(220%);
   z-index: 998;
-  margin-left: 28px;
 }
 .button-save-photo-input{
   transform: translateY(-350%);
@@ -130,18 +148,41 @@ div.input-field.col.s12.center-align.green{
 .third-section{
   margin-top: 10vh;
 }
+@media (min-width: 768px) {
+.circle-img {
+  height: 180px !important;
+  width: 180px !important;
+}
+.button-save-photo {
+  transform: translateY(350%);
+}
+.height-portada{
+  height: 45vh;
+}
+.translate{
+  transform: translateY(-80%);
+}
+.name-user {
+  padding-top: 4vh !important;
+}
+}
 /* SOLO PARA DESKTOP DE LA VISTA PERFIL*/
-@media (min-width: 993px) {
+@media (min-width: 992px) {
   .container{
     width: 90%;
   }
  #perfil img.responsive-img {
    max-width: 100%;
  }
-
+ .name-user {
+   padding-top: 0 !important;
+ }
  .btn {
    font-size: 1.2rem;
  }
+ .button-save-photo {
+    transform: translateY(550%);
+}
  .biografia {
    width: 50%;
    margin-top: 1rem;
@@ -152,12 +193,12 @@ div.input-field.col.s12.center-align.green{
  .responsive-image-post {
    height: 50vh;
  }
- .circle{
-   width: 200px;
-   height: 200px;
+ .circle-img{
+   width: 250px !important;
+   height: 250px !important;
  }
- .height-portada{
-   height: 50vh;
+ .name-user {
+   padding-top: 4vh !important;
  }
 }
 
