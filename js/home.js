@@ -14,6 +14,10 @@ $(document).ready(function() {
   $('#image-user').attr('src', localStorage.fotoPerfil);
   $('#username-home span:first-child').text(localStorage.firstName);
   $('#email-home  span:first-child').text(localStorage.email);
+  // Post-texto guardada con el evento click
+  $cardBox.append('<div class ="col s12 grey lighten-3  div-post"><p class ="col s12"> ' + localStorage.textPost1 + ' </p><p class ="col s12">' + new Date().getHours() + ':' + new Date().getMinutes() + ' horas' + '</p></div>');
+  // Post (fot + text)guardada con el evento change
+  $cardBox.append('<div class ="col s12 grey lighten-3  div-post"><p class ="col s12"> ' + localStorage.textPost + ' </p><p class ="col s12"><img class = " col s12 responsive-image-post"src= "' + localStorage.fotoPostGaleria + '"/></p><p class ="col s12">' + new Date().getHours() + ':' + new Date().getMinutes() + ' horas' + '</p></div>');
   // fin de guardado
   $('#textarea1').on('keyup', function() {
     if ($('#textarea1').val().length !== 0) {
