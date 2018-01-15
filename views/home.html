@@ -17,10 +17,14 @@
     <link rel="stylesheet" href="../css/main-1.css">
   </head>
   <body class="vh100 background-cosmic">
+    <!--ENCABEZADO-->
+    <!--Header vista movile-->
     <header class="hide-on-med-and-up hide-on-med-only show-on-small show-on-medium">
       <nav class="navbar-fixed">
         <div class="nav-wrapper">
-          <img class="responsive-img logo-header" src="../assets/images/logo.png" alt="Serendipia">
+          <figure class="inline-block">
+            <img class="responsive-img logo-header" src="../assets/images/seren.png" alt="Serendipia">
+          </figure>
           <ul class="right">
             <li><a href="vistaPerfil.html"><i class="material-icons">account_circle</i></a></li>
             <li><a href="home.html"><i class="material-icons">home</i></a></li>
@@ -34,61 +38,58 @@
         </ul>
       </nav>
     </header>
+    <!--header vista desktop-->
     <header class="show-on-large hide-on-small-only hide-on-med-and-down">
     <nav class="navbar-fixed nav-desktop">
       <div class="container-nav">
        <div class="row nav-wrapper">
          <div class="col l4 xl4">
-           <a href=""><img src="../assets/images/logo.png" alt="logo" class="responsive-img logo-header"></a>
+           <a href=""><img src="../assets/images/seren.png" alt="logo" class="responsive-img logo-header"></a>
          </div>
          <div class="input-field col l4 xl4">
           <i class="material-icons prefix">search</i>
-          <input class="input" id="search" type="text" class="validate" placeholder="   Buscar">
+          <input class="input" id="search" type="text" class="validate" placeholder="Buscar">
         </div>
       <ul class="right hide-on-med-and-down col l4 xl4">
         <li><a href="vistaPerfil.html"><i class="material-icons">account_circle</i></a></li>
-        <li><a href="#!"><i class="material-icons">notifications</i></a></li>
-        <li><a href="home.html"><i class="material-icons">home</i></li>
+        <li><a href="home.html"><i class="material-icons">home</i></a></li>
+        <li><a href="#!"><i class="material-icons">notifications</i></li>
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">more_vert</i></a></li>
       </ul>
       <!--Lista desplegable para salir(cerrar sesión)-->
       <ul id="dropdown1" class="dropdown-content">
-        <li><a href="´principal.html">Salir</a></li>
+        <li><a href="principal.html">Salir</a></li>
       </ul>
        </div>
       </div>
     </nav>
   </header>
-  <ul id="slide-out" class="side-nav fixed">
-      <li><a href="#!">First Sidebar Link</a></li>
-      <li><a href="#!">Second Sidebar Link</a></li>
-    </ul>
-    <main id="home" class="padding-top-main">
+  <main>
+    <ul id="slide-out" class="side-nav fixed m-top">
+      <li><div class="user-view">
+    <div class="background">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg" alt="" class="responsive-img">
+    </div>
+    <a href="vistaPerfil.html"><img class="circle" src="https://i.pinimg.com/736x/0c/db/4f/0cdb4fe1bb54b149248e85a28698b229--girl-pics-my-girl.jpg"></a>
+    <a href="#!name"><span class="white-text name">Choi Ye Won</span></a>
+    <a href="#!email"><span class="white-text email">arin_tu_patrona@gmail.com</span></a>
+  </div></li>
+  <li><a href="#!"><i class="material-icons">grade</i>Accesos directos</a></li>
+  <li><div class="divider"></div></li>
+  <li><a href="#!"><i class="material-icons">email</i>Mensajes</a></li>
+  <li><div class="divider"></div></li>
+  <li><a href="#!"><i class="material-icons">insert_invitation</i>Eventos</a></li>
+  <li><div class="divider"></div></li>
+  <li><a class="waves-effect" href="#!"><i class="material-icons">all_inclusive</i>Páginas</a></li>
+  <li><div class="divider"></div></li>
+      </ul>
+  </main>
+    <section id="home" class="padding-top-main">
       <div class="container"> <!--show-on-large hide-on-small-only hide-on-med-and-down-->
         <div class="row margin-btm-0">
-          <div class="col s4 m4 l4">
+          <div class="col s12 m12 l8 xl9 offset-l4 offset-xl3">
             <div class="card">
-              <div class="card-content">
-                <div id="imagen-user">
-                  <a href="vistaPerfil.html"><img src="https://i.pinimg.com/736x/0c/db/4f/0cdb4fe1bb54b149248e85a28698b229--girl-pics-my-girl.jpg" alt="" class="responsive-img imagen-circle"></a>
-                  <div id="name-user">
-                    <h6 class="center-align">Choi Ye Won</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="card-action card-action-padding">
-                <ul class="collapsible" data-collapsible="accordion">
-                  <li>
-                    <div class="collapsible-header padding-collapsible">Info</div>
-                    <div class="collapsible-body padding-collapsible"><span>Cantante</span></div>
-                  </li>
-                </ul>
-            </div>
-            </div>
-          </div>
-          <div class="col s8 m8 l8">
-            <div class="card height-card-post">
-              <div class="card-content">
+              <div class="card-content padding-card">
                 <div class="input-field margin-top">
                 <textarea id="textarea1" class="materialize-textarea"></textarea>
                 <label for="textarea1">¿Qué quieres compartir?</label>
@@ -99,22 +100,22 @@
                 </div>
                 <a  id="btn-publicar-home" class="waves-effect btn green col s7 l6 offset-s1 offset-l1 disabled btn-style-principal width-btn">Publicar</a>
               </div>
-              <br>
-              <br>
-              <div class="margin-top-5vh">
-                <div class="row">
-                  <div class="col s12">
-                    <div id="card-box">
-                      <!--Aquí irán las publicaciones-->
-                    </div>
-                  </div>
-                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="margin-top-5vh">
+          <div class="row">
+            <div class="col s12 m12 l8 xl9 offset-l4 offset-xl3">
+              <div id="card-box">
+                <!--Aquí irán las publicaciones-->
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </section>
   </body>
   <script type="text/javascript" src="../vendors/jQuery/jquery-3.2.1.min.js"></script>
   <!-- Compiled and minified JavaScript -->

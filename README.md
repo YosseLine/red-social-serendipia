@@ -141,7 +141,7 @@ Por último, analizamos ambos sketchs y decidimos unir las mejores ideas:
 
 7. Testeo con usuarios: Producto final
 
-* Se testeó con los mismos usuarios(2), quedó el prototipo y  se cambió lo siguiente: el fondo de todas las vistas.
+* Se testeó con los mismos usuarios(2), quedó el prototipo y  se cambió lo siguiente: el fondo de todas las vistas, el logo, y loes estilos de algunas vistas.
 
 ***
 
@@ -149,7 +149,7 @@ Por último, analizamos ambos sketchs y decidimos unir las mejores ideas:
 
 - jQuery.
 
-- Materialize
+- Materialize.
 
 - HTML5.
 

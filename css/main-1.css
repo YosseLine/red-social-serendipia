@@ -59,7 +59,7 @@ header{
 nav.navbar-fixed{
   height: 75px;
   padding: 10px;
-  background-color: rgba(62,176,96,0.3);
+  background-color: rgba(62,176,96,0.8);
 }
 /*Estilos para vista principal*/
 #particles-js .img-principal{
@@ -208,11 +208,11 @@ i.large.heart{
   font-size: 10px;
 }
 #home textarea.materialize-textarea:focus{
-  border-bottom: 1px solid #FFF;
-  box-shadow: 0 1px 0 0 #FFF;
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
 }
 #home textarea.materialize-textarea:focus + label{
-  color: #FFF;
+  color: #000;
 }
 #home div.margin-top-5vh{
   margin-top: 5vh;
@@ -220,7 +220,9 @@ i.large.heart{
  #home div.collapsible-header.padding-collapsible, #home div.collapsible-body.padding-collapsible{
   padding: 1rem 0.4rem;
 }
-
+#home div.card div.card-content.padding-card {
+  padding: 24px 24px 45px 24px;
+}
 @media only screen and (min-width: 601px) {
 .container {
     width: 90%;
@@ -283,6 +285,9 @@ i.large.heart{
 }
 #home div.margin-top-5vh{
   margin-top: 3.5vh;
+}
+ul.side-nav.fixed.m-top{
+  margin-top: 75px;
 }
 }
 @media (min-width: 1200px) {
