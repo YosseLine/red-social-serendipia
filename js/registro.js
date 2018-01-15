@@ -1,4 +1,7 @@
 function begin() {
+  var $password = $('#password');
+  var $confirmPassword = $('#confirm-password');
+  var $firstName = $('#first_name');
   function nameValid() {
     return $('#first_name').val().length >= 3;
   }
@@ -9,11 +12,32 @@ function begin() {
   function radioValid() {
     return $('#test1').prop('checked') || $('#test2').prop('checked');
   }
-
+  function passwordValid() {
+    return $('#password').val().length >= 6;
+  }
+  function passwordsMaching() {
+    return $('#password').val() === $('#confirm-password').val();
+  }
   function allOk() {
     return nameValid() && emailValid() && radioValid();
   }
-
+  // Funciones de validacion de la contraseña
+  function passwordEvent() {
+    if (passwordValid())
+      $('#password').next().addClass('hide');
+    else
+      $('#password').next().removeClass('hide');
+  }
+  function confirmPasswordEvent() {
+    if (passwordsMaching())
+      $('#confirm-password').next().addClass('hide');
+    else
+      $('#confirm-password').next().removeClass('hide');
+  }
+  // EVentos para validadr la contraseña
+  $password.focus(passwordEvent).on('keyup', passwordEvent);
+  $confirmPassword .focus(confirmPasswordEvent).on('keyup', confirmPasswordEvent);
+  // Activar el boton
   $('#filled-in-box').on('change', function() {
     if (allOk()) {
       $('#btn-create-account').removeClass('disabled');
@@ -23,16 +47,28 @@ function begin() {
   });
 
   $('#btn-create-account').on('click', function() {
+    event.preventDefault();
+    localStorage.firstName = $firstName.val();
+    localStorage.password = $password.val();
+    localStorage.email = $('#email').val();
     alert('¡Bienvenid@ a Serendipia!');
+    alert('¡Bienvenid@ a Serendipia! Por favor inicia sesión :)');
+    setTimeout(function() {
+      window.location.href = '../views/registro.html';
+    });
   });
 }
-
+// --- fin de la funcion begin()------
 $(document).ready(function() {
   var $firstName = $('#first_name');
   var $password = $('#password');
   $('.button-collapse').dropdown();
   $('.modal').modal();
+  // Funcion de validacion de registro
   begin();
+  console.log(localStorage.firstName);
+  console.log(localStorage.password);
+  console.log(localStorage.email);
   var $loginAccount = $('#login-account');
   var $btnCreateAccount = $('#btn-create-account');
   var $person = $('#person');
@@ -41,16 +77,9 @@ $(document).ready(function() {
   var validatePerson = false;
   var validateLock = false;
 
-  // Funión para guardar los datos del usuario.
-  $btnCreateAccount.on('click', function() {
-    event.preventDefault();
-    localStorage.firstName = $firstName.val();
-    localStorage.password = $password.val();
-    alert('¡Bienvenid@ a Serendipia! Por favor inicia sesión :)');
-  });
-
+  // Inicio de sesión
   $person.on('input', function() {
-    if ($(this).val() === localStorage.firstName) {
+    if ($(this).val() === localStorage.firstName || $(this).val() === localStorage.email) {
       // alert('pasa');
       validatePerson = true;
     }
@@ -60,7 +89,8 @@ $(document).ready(function() {
     if ($(this).val() === localStorage.password) {
       // alert('esto tambien pasa');
       validateLock = true;
-      $loginAccount.removeClass('disabled');
+      if (validatePerson && validateLock)
+        $loginAccount.removeClass('disabled');
     }
   });
 
@@ -74,7 +104,7 @@ $(document).ready(function() {
     }
   });
 
-  // Login with google
+  // Inicio de sesion con google
   var provider = new firebase.auth.GoogleAuthProvider();
   $('#login-google').click(function() {
     firebase.auth()
@@ -83,16 +113,22 @@ $(document).ready(function() {
         console.log(result.user);
         $('#login-google').hide();
         alert('¡Bienvenid@ a Serendipia!');
+        guardarDatos(result.user);
+        setTimeout(function() {
+          window.location.href = 'home.html';
+        }, 2000);
       });
   });
 
-  // Ésta función guarda automáticamente
-  function saveData(user) {
-    var user = {
-      name: user.displayName,
-      email: user.email,
+  // Ésta función guarda automáticamente datos del usuario que inicio sesión con google
+  function guardarDatos(user) {
+    var usuario = {
       uid: user.uid,
-      photo: user.photoURL
+      nombre: user.displayName,
+      email: user.email,
+      foto: user.photoURL
     };
-  };
+    firebase.database().ref('usuarios/' + user.uid).set(usuario);
+    console.log(user.uid);
+  }
 });

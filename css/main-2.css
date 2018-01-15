@@ -80,7 +80,7 @@ a.btn-style-principal{
 .circle-img{
   height: 120px !important;
   width: 120px !important;
-  border: 5px solid rgb(62,176,96);
+  border: 2px solid rgb(62,176,96);
 }
 .btn-fotos {
   margin-bottom: 1rem;
@@ -95,7 +95,7 @@ a.btn-style-principal{
 .container-perfil-portada {
     position: relative;
 }
-.2 a {
+.2a {
     position: absolute;
     left:20px;
     display: none;
@@ -114,6 +114,11 @@ a.btn-style-principal{
 }
 .margin-btm-0{
   margin-bottom: 0;
+}
+.tabs {
+  border-radius: 5px;
+  margin-top: 7px;
+  margin-bottom: 7px
 }
 .button-save-photo{
   transform: translateY(220%);
@@ -180,8 +185,17 @@ div.input-field.col.s12.center-align.green{
  .btn {
    font-size: 1.2rem;
  }
+ .lg {
+   font-size: 1.3rem;
+ }
+ .div-post {
+   font-size: 1.2rem;
+ }
  .button-save-photo {
     transform: translateY(550%);
+}
+.name-user {
+  font-size: 5rem;
 }
  .biografia {
    width: 50%;
@@ -204,7 +218,7 @@ div.input-field.col.s12.center-align.green{
 
 @media (min-width: 1200px) {
   .height-portada{
-    height: 55vh;
+    height: 65vh;
   }
   .third-section{
     margin-top: 40vh;

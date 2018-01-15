@@ -45,6 +45,10 @@ color: #FFF;
 .margin-bottom{
   margin-bottom: 10px;
 }
+.name {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
 /*Estilos para body*/
 body{
   font-family: 'Josefin Sans', sans-serif;

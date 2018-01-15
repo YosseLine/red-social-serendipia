@@ -7,7 +7,14 @@ $(document).ready(function() {
   var $imagenUser = $('#imagen-user');
   var $cardBox = $('#card-box');
   var $filePhoto = $('#file-photo');
-
+  // guardandooo
+  console.log(localStorage.firstName);
+  console.log(localStorage.fotoPerfil);
+  console.log(localStorage.email);
+  $('#image-user').attr('src', localStorage.fotoPerfil);
+  $('#username-home span:first-child').text(localStorage.firstName);
+  $('#email-home  span:first-child').text(localStorage.email);
+  // fin de guardado
   $('#textarea1').on('keyup', function() {
     if ($('#textarea1').val().length !== 0) {
       $('#btn-publicar-home').removeClass('disabled');

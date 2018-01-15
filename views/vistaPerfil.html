@@ -68,8 +68,8 @@
     <div class="container 100%">
       <div class="row">
         <div class="col s12 container-perfil-portada">
-          <a href="#" id="file-select" class="btn green lighten-2 absolute btn-style-principal">Sube</a>
-          <img id="preview-img"src="https://img.kpopmap.com/2015/03/ohmygirlprofile.jpg" alt="" class=" height-portada  col s12 l12 responsive-img">
+          <a href="#" id="file-select" class="btn green lighten-2 absolute btn-style-principal"><i class="material-icons">camera_enhance</i></a>
+          <img id="preview-img"src="https://img.kpopmap.com/2015/03/ohmygirlprofile.jpg" alt="" class=" height-portada  col s12 l12 z-depth-5">
           <form enctype="multipart/form-data">
             <input id="file-portada" name="file" type="file" class="hide"/>
           </form>
@@ -81,31 +81,32 @@
     <div class="container">
       <div class="row margin-btm-0">
         <div class="col s4 l3 offset-s1 offset-l1 container-perfil-portada">
-          <a href="#" id="file-select-perfil" class="btn green lighten-2 button-save-photo btn-style-principal absolute">Sube</a>
-          <div class="height-perfil"><img id="perfil-img" src="https://i.pinimg.com/736x/0c/db/4f/0cdb4fe1bb54b149248e85a28698b229--girl-pics-my-girl.jpg" alt="" class="responsive-img circle-img"></div>
+          <a href="#" id="file-select-perfil" class="btn green lighten-2 button-save-photo btn-style-principal absolute"><i class="material-icons">camera_enhance</i></a>
+          <div class="height-perfil z-depth-4"><img id="perfil-img" src="https://i.pinimg.com/736x/0c/db/4f/0cdb4fe1bb54b149248e85a28698b229--girl-pics-my-girl.jpg" alt="" class="responsive-img z-depth-4 circle-img"></div>
         </div>
         <form enctype="multipart/form-data" class="button-save-photo-input">
           <input id="file-perfil" name="file" type="file" class="hide"/>
         </form>
         <div class="font-white center-align col s6 m6 offset-s4 offset-m3 absolute">
-          <h3 class="name-user">Choi Ye Won</h3>
+          <h4 id="username-perfil"class="name-user"></h4>
+          <h6 id="email-perfil"class="email"></h6>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <ul id="tabs-swipe-demo" class="tabs">
-            <li class="tab col s3 xl4"><a class="active green-ul" href="#biography">Biografía</a></li>
-            <li class="tab col s3 xl4"><a class= "green-ul" href="#photos">Fotos</a></li>
-            <li class="tab col s3 xl4"><a class= "green-ul" href="#friends">Amigos</a></li>
+          <ul id="tabs-swipe-demo" class="tabs green lighten-1">
+            <li class="tab col s3 xl4"><a class="active green-ul" href="#biography"><strong class="lg white-text">Biografía</strong></a></li>
+            <li class="tab col s3 xl4"><a class= "green-ul" href="#photos"><strong class="lg white-text">Fotos</strong></a></li>
+            <li class="tab col s3 xl4"><a class= "green-ul" href="#friends"><strong class="lg white-text">Amigos</strong></a></li>
           </ul>
           <div id="biography" class="col s12">
             <div class="container">
              <div class="row">
                <div class="col s12">
                  <form class="card">
-                   <div class="card-content">
+                   <div class="card-content grey lighten-4">
                      <div class="input-field center-align">
                        <textarea id="textarea1" class="materialize-textarea"></textarea>
                        <label for="textarea1"><i class="material-icons left">account_circle</i>¿Qué quieres compartir?</label>
@@ -136,7 +137,7 @@
                   <form enctype="multipart/form-data">
                     <input id="file-foto" name="file" type="file" class="hide"/>
                   </form>
-                  <div class="col s12" id="fotos-container">
+                  <div class="col s12 grey lighten-3" id="fotos-container">
                     <!-- aqui van las fotos-->
                   </div>
                 </div>
@@ -146,8 +147,8 @@
           <div id="friends" class="col s12">
             <div class="container">
               <div class="row">
-                <div class="col s12">
-                  <h4 class="center-align font-white">Amigos</h4>
+                <div class="col s12 grey lighten-4">
+                  <h4 class="center-align font-white green-text">Amigos</h4>
                   <ul class="collection">
                     <li class="collection-item avatar">
                       <img src="../assets/images/perfil.png" alt="" class=" responsive-img circle">
